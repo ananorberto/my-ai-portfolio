@@ -1,0 +1,132 @@
+site_name: Portfólio de IA
+site_url: https://ananorberto.github.io/portfolio-ia/
+site_author: Ana Norberto
+site_description: Portfólio de Inteligência Artificial
+
+theme:
+  name: material
+  language: pt-BR
+  logo: assets/logo_robot.png
+  favicon: assets/logo_robot.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.prune
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+    - content.action.download
+    - content.action.copy
+    - content.action.print
+    - content.action.share
+    - content.action.feedback
+    - content.action.issue
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+      primary: deep purple 
+      accent:  deep purple 
+      background: white
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+      primary:  deep purple 
+      accent:  deep purple 
+      background: "#1a1a1a"
+  font:
+    text: "Raleway"
+    code: "IBM Plex Mono"
+  font_family: "Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+  font_size: 16px
+  font_size_small: 14px
+  font_size_large: 18px
+  font_size_h1: 2.5em
+  font_size_h2: 2em
+  font_size_h3: 1.5em
+  font_size_h4: 1.25em
+  font_size_h5: 1.1em
+  font_size_h6: 1em
+  font_weight_light: 300
+  font_weight_normal: 400
+  font_weight_bold: 600
+  font_weight_black: 700
+  font_weight_code: 400
+  font_weight_code_bold: 600
+  font_weight_code_italic: 400
+  font_weight_code_bold_italic: 600
+  font_weight_code_light: 300
+  font_weight_code_light_italic: 300
+  font_weight_code_medium: 500
+  font_weight_code_medium_italic: 500
+  font_weight_code_semibold: 600
+  font_weight_code_semibold_italic: 600
+  font_weight_code_extrabold: 800
+  font_weight_code_extrabold_italic: 800
+  font_weight_code_black: 900
+  font_weight_code_black_italic: 900
+  icon:
+    repo: fontawesome/brands/github
+  navigation:
+    collapse: true
+    expand: true
+    sticky: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra:
+  alternate:
+    - name: Português
+      link: /
+      lang: pt-BR
+    - name: English
+      link: /en/
+      lang: en
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/ananorberto
+    - icon: fontawesome/brands/linkedin
+      link: https://linkedin.com/in/seu-usuario
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+  - attr_list
+  - md_in_html
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+
+nav:
+  - Início: index.md
+  - Portfólio 1 – Introdução à IA: 
+      - Introdução: portfolio1/introducao.md
+      - Histórico da IA: portfolio1/historico.md
+      - Estado da Arte: portfolio1/estado_arte.md
+      - Benefícios e Riscos: portfolio1/beneficios_riscos.md
+      - Agentes Inteligentes:
+          - Conceito: portfolio1/agentes_inteligentes.md
+          - Ambientes: portfolio1/ambientes.md
+          - Racionalidade: portfolio1/racionalidade.md
+      - Problemas/Projetos: portfolio1/projetos.md
+      - Conclusão: portfolio1/conclusao.md
