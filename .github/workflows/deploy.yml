@@ -1,0 +1,31 @@
+# .github/workflows/deploy.yml
+name: Deploy MkDocs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main  # ou 'master', dependendo do seu repositório
+
+permissions:
+  contents: write  # necessário para publicar no GitHub Pages
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Instalar o Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependências
+        run: |
+          pip install mkdocs-material
+
+      - name: Build e deploy no GitHub Pages
+        run: |
+          mkdocs gh-deploy --force
