@@ -1,6 +1,6 @@
 site_name: Portfólio de IA
 site_url: https://ananorberto.github.io/portfolio-ia/
-site_author: Ana Norberto
+site_author: Ana Beatriz Norberto
 site_description: Portfólio de Inteligência Artificial
 
 theme:
@@ -84,10 +84,7 @@ theme:
     collapse: true
     expand: true
     sticky: true
-
-extra_css:
-  - stylesheets/extra.css
-
+    
 extra:
   alternate:
     - name: Português
@@ -114,8 +111,8 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.emoji:
-      emoji_index: !!python/name:materialx.emoji.twemoji
-      emoji_generator: !!python/name:materialx.emoji.to_svg
+      emoji_index: !!python/name:pymdownx.emoji.gemoji
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
 
 nav:
   - Início: index.md
@@ -124,9 +121,6 @@ nav:
       - Histórico da IA: portfolio1/historico.md
       - Estado da Arte: portfolio1/estado_arte.md
       - Benefícios e Riscos: portfolio1/beneficios_riscos.md
-      - Agentes Inteligentes:
-          - Conceito: portfolio1/agentes_inteligentes.md
-          - Ambientes: portfolio1/ambientes.md
-          - Racionalidade: portfolio1/racionalidade.md
+      - Agentes Inteligentes: portfolio1/agentes_inteligentes.md
       - Problemas/Projetos: portfolio1/projetos.md
       - Conclusão: portfolio1/conclusao.md

@@ -26,3 +26,12 @@ Cada projeto incluirá:
 - Implementação
 - Resultados
 - Discussão 
+
+---
+
+### Histórico de versão
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 05/05/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+

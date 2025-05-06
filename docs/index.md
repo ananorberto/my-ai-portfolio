@@ -25,4 +25,4 @@ Olá! Me chamo Ana Beatriz Norberto, sou estudante de Engenharia de Software na 
     <p>💻 GitHub: <a href="https://github.com/ananorberto">@ananorberto</a></p>
 </div>
 
-> Projeto desenvolvido como parte da avaliação por portfólio para a disciplina de IA – FGA/UnB.
+> Projeto desenvolvido como parte da avaliação por portfólio para a disciplina de IA – FGA/UnB. Ministrada pelo professor **Fabiano Araujo Soares**.

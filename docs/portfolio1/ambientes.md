@@ -16,3 +16,12 @@ Nesta seção, exploraremos os diferentes tipos de ambientes em que os agentes d
 ## Características dos Ambientes
 
 Cada tipo de ambiente apresenta desafios específicos para o desenvolvimento de agentes inteligentes. 
+
+---
+
+### Histórico de versão
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 05/05/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+

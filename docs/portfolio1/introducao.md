@@ -8,3 +8,12 @@ O portfólio está organizado para acompanhar essa jornada. Começa com uma intr
 
 A ideia é que esse material não só sirva como registro do semestre, mas também como uma forma de mostrar como a IA pode ser aplicada de maneira ética, criativa e relevante no nosso futuro profissional.
 
+
+---
+
+### Histórico de versão
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 05/05/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+
