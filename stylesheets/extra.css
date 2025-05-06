@@ -1,0 +1,24 @@
+.md-header__button.md-logo {
+    padding: 0.5rem;
+    margin: 0;
+}
+
+.md-header__button.md-logo img {
+    width: 10rem !important;
+    height: 10rem !important;
+    max-width: none !important;
+    max-height: none !important;
+    object-fit: contain;
+}
+
+.md-header__title {
+    margin-left: 1rem;
+}
+
+/* Ajuste para telas maiores */
+@media screen and (min-width: 76.25em) {
+    .md-header__button.md-logo img {
+        width: 12rem !important;
+        height: 12rem !important;
+    }
+} 
