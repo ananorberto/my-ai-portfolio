@@ -19,11 +19,3 @@ Assim como a IA continua evoluindo, meu entendimento sobre o assunto também seg
 | `1.0`  | 06/05/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
 ---
 
-
-
-### Histórico de Versão  
-| Versão | Data       | Modificações                          | Autor                |  
-|--------|------------|---------------------------------------|----------------------|  
-| 1.1    | 10/05/2025 | Adição de reflexão crítica e citação  | Ana Beatriz Norberto |  
-
----
