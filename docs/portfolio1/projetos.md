@@ -1,7 +1,3 @@
-Com certeza! Aqui está a versão aprimorada do seu `.md`, com algumas pequenas expansões e ajustes de estilo para maior fluidez, clareza técnica e reforço dos fundamentos teóricos com base nas referências utilizadas:
-
----
-
 ## Projeto: Sistema de Busca Semântica em Relatórios Policiais sobre Armas Brancas
 
 ### Contexto e Relevância
