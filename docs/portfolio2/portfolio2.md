@@ -38,15 +38,7 @@ Os principais conceitos envolvidos são:
     *   **Complexidade de Espaço (Space Complexity):** Quanta memória é necessária para a busca.
 *   **Filas:** Estruturas de dados usadas para gerenciar a ordem em que os nós são explorados pelos algoritmos de busca: fila FIFO (First-In, First-Out) para busca em largura, pilha LIFO (Last-In, First-Out) para busca em profundidade, e fila de prioridade para busca *best-first*. O uso dessas estruturas permite que os algoritmos explorem estados não testados (lista *open*) e evitem repetir caminhos infrutíferos (lista *closed*).
 
-# Análise e Sugestões de Algoritmos para Portfólio de IA (Baseado em Russell & Norvig)
-
-Este documento apresenta a listagem de algoritmos solicitada, categorizada conforme o livro "Inteligência Artificial" de Stuart Russell e Peter Norvig (3ª edição), e propõe alternativas aos algoritmos já utilizados em seu portfólio.
-
-**Referência Principal:**
-
-RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013.
-
----
+# Análise de Algoritmos para Portfólio 2 de IA (Baseado em Russell & Norvig)
 
 
 
@@ -116,7 +108,7 @@ Ambientes complexos apresentam desafios adicionais em relação à busca clássi
 
 Os Algoritmos Genéticos (AGs) pertencem a uma classe mais ampla de algoritmos evolucionários, que se inspiram na evolução biológica para resolver problemas de busca e otimização. Eles operam sobre uma população de soluções candidatas, aplicando operadores como seleção, recombinação (cruzamento) e mutação para gerar novas populações com aptidão progressivamente maior. Russell e Norvig (2013) discutem essas abordagens no contexto da busca local estocástica e otimização:
 
-*   **Algoritmos Genéticos (Genetic Algorithms - GAs):** Como descrito anteriormente no seu portfólio, os AGs mantêm uma população de estados candidatos (representados como strings ou cromossomos) e geram a próxima geração combinando pares de indivíduos (cruzamento) e introduzindo pequenas alterações aleatórias (mutação). A seleção dos pais geralmente favorece indivíduos com maior aptidão (fitness), que mede a qualidade da solução representada pelo indivíduo.
+*   **Algoritmos Genéticos (Genetic Algorithms - GAs):** Os AGs mantêm uma população de estados candidatos (representados como strings ou cromossomos) e geram a próxima geração combinando pares de indivíduos (cruzamento) e introduzindo pequenas alterações aleatórias (mutação). A seleção dos pais geralmente favorece indivíduos com maior aptidão (fitness), que mede a qualidade da solução representada pelo indivíduo.
 *   **Programação Genética (Genetic Programming - GP):** Uma variante dos AGs onde os indivíduos na população são programas de computador (geralmente representados como árvores de expressão) em vez de strings. O objetivo é evoluir um programa que resolva uma tarefa específica. Os operadores de cruzamento e mutação são adaptados para manipular essas estruturas de programa.
 *   **Estratégias de Evolução (Evolution Strategies - ES):** Outra abordagem evolucionária, frequentemente usada para otimização de parâmetros em espaços contínuos. Diferentemente dos AGs clássicos que operam em representações binárias ou discretas e enfatizam o cruzamento, as ES geralmente trabalham com vetores de números reais e focam mais na mutação (frequentemente usando distribuições gaussianas) e na seleção determinística ou probabilística dos melhores indivíduos (pais e/ou filhos) para formar a próxima geração.
 
@@ -124,26 +116,8 @@ Esses algoritmos são considerados "disruptivos" ou estocásticos porque introdu
 
 *Referência:* RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4 (particularmente a seção sobre algoritmos genéticos).
 
----
-
-
-
-## 5. Algoritmos Utilizados no Seu Portfólio
-
-Com base na análise do arquivo `pasted_content.txt` que você forneceu, os algoritmos específicos que você utilizou como exemplos em cada categoria foram:
-
-*   **Busca Cega:** Você apresentou e implementou a **Busca em Largura (Breadth-First Search - BFS)**.
-*   **Busca Informada:** Você descreveu e implementou a **Busca A* (A-Star Search)**.
-*   **Busca em Ambientes Complexos:** Você utilizou a **Subida de Encosta (Hill Climbing)**, especificamente a variante de maior aclive, aplicada ao problema das N-Rainhas.
-*   **Algoritmo Genético (ou Disruptivo):** Você apresentou e implementou um **Algoritmo Genético (Genetic Algorithm - GA)** para o problema OneMax.
-
-Essa identificação é crucial para a próxima etapa, onde selecionaremos algoritmos *diferentes* destes para cada categoria, conforme sua solicitação.
-
----
-
-
-
-## 6. Sugestões de Algoritmos Alternativos
+<!-- comentário 
+## 5. Sugestões de Algoritmos Alternativos
 
 Considerando os algoritmos já presentes em seu portfólio (BFS, A*, Hill Climbing e GA) e a lista de algoritmos disponíveis em Russell e Norvig (2013), sugiro as seguintes alternativas interessantes para cada categoria, que provavelmente diferem dos exemplos dados em sala:
 
@@ -155,10 +129,11 @@ Considerando os algoritmos já presentes em seu portfólio (BFS, A*, Hill Climbi
 A seguir, apresentarei uma explicação detalhada para cada um desses algoritmos selecionados.
 
 ---
+-->
 
 
 
-### 6.1. Busca Cega Alternativa: Busca com Aprofundamento Iterativo (IDDFS)
+### 5.1. Busca Cega Alternativa: Busca com Aprofundamento Iterativo (IDDFS)
 
 A Busca com Aprofundamento Iterativo (Iterative Deepening Depth-First Search - IDDFS), conforme descrita por Russell e Norvig (2013), representa uma engenhosa combinação das vantagens da Busca em Largura (BFS) e da Busca em Profundidade (DFS). Enquanto a BFS garante encontrar a solução mais rasa (ótima em termos de número de passos para custos uniformes) e é completa, ela sofre com altos requisitos de memória, que podem crescer exponencialmente com a profundidade. Por outro lado, a DFS possui requisitos de memória modestos (lineares em relação à profundidade máxima), mas não é completa em espaços de estados infinitos ou com ciclos, e não garante otimalidade.
 
@@ -166,13 +141,72 @@ A IDDFS supera essas limitações realizando repetidas buscas em profundidade, m
 
 A principal preocupação com a IDDFS é a aparente redundância, já que os nós nos níveis superiores da árvore de busca são gerados múltiplas vezes em diferentes iterações. No entanto, Russell e Norvig (2013) demonstram que, para árvores de busca onde a maioria dos nós está no nível mais baixo (o que é comum em muitos problemas, especialmente com fatores de ramificação maiores que 1), o custo adicional de regenerar os nós superiores é relativamente pequeno em comparação com o custo de explorar o último nível. A complexidade de tempo da IDDFS acaba sendo da mesma ordem de magnitude que a da BFS (O(b^d)), enquanto sua complexidade de espaço é a mesma da DFS (O(bd)), onde `b` é o fator de ramificação e `d` é a profundidade da solução mais rasa. Essa combinação de completude, otimalidade (para custos uniformes) e eficiência de memória torna a IDDFS a estratégia de busca cega preferida em muitas situações onde o espaço de estados é grande e a profundidade da solução é desconhecida.
 
+```python
+
+
+# Representação de um grafo simples como dicionário
+
+grafo = {
+    'A': ['B', 'C', 'D'],
+    'B': ['E'],
+    'C': [],
+    'D': ['F'],
+    'E': [],
+    'F': []
+}
+
+def dfs_limitado(grafo, no_atual, objetivo, limite):
+    """
+    Busca em profundidade limitada a um certo nível.
+    
+    :param grafo: Dicionário representando o grafo
+    :param no_atual: Nó atual na busca
+    :param objetivo: Nó que queremos encontrar
+    :param limite: Profundidade máxima permitida
+    :return: True se o objetivo for encontrado, False caso contrário
+    """
+    print(f"Visitando {no_atual}, limite restante: {limite}")
+    
+    if no_atual == objetivo:
+        return True
+    if limite == 0:
+        return False
+
+    for vizinho in grafo.get(no_atual, []):
+        if dfs_limitado(grafo, vizinho, objetivo, limite - 1):
+            return True
+    return False
+
+def iddfs(grafo, inicio, objetivo, limite_maximo):
+    """
+    Busca com Aprofundamento Iterativo (IDDFS).
+    
+    :param grafo: Dicionário com os nós e vizinhos
+    :param inicio: Nó inicial da busca
+    :param objetivo: Nó que queremos encontrar
+    :param limite_maximo: Profundidade máxima de busca
+    :return: True se encontrou o objetivo, False caso contrário
+    """
+    for profundidade in range(limite_maximo + 1):
+        print(f"\n🔁 Profundidade atual: {profundidade}")
+        if dfs_limitado(grafo, inicio, objetivo, profundidade):
+            print(f"\n✅ Objetivo '{objetivo}' encontrado na profundidade {profundidade}.")
+            return True
+    print(f"\n❌ Objetivo '{objetivo}' não encontrado até a profundidade {limite_maximo}.")
+    return False
+
+# Executa o algoritmo procurando o nó 'F' a partir do nó 'A' com profundidade máxima 3
+iddfs(grafo, 'A', 'F', 3)
+```
+
+
 *Referência:* RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.
 
 ---
 
 
 
-### 6.2. Busca Informada Alternativa: Busca Recursiva Best-First (RBFS)
+### 5.2. Busca Informada Alternativa: Busca Recursiva Best-First (RBFS)
 
 A Busca A* é renomada por sua otimalidade e completude quando usada com heurísticas admissíveis, mas sua principal desvantagem reside na potencial necessidade exponencial de memória para armazenar a fronteira (nós abertos). Para contornar essa limitação, Russell e Norvig (2013) apresentam a Busca Recursiva Best-First (Recursive Best-First Search - RBFS), um algoritmo que visa mimetizar a operação da A* utilizando apenas espaço linear, similar à busca em profundidade.
 
@@ -180,13 +214,94 @@ A RBFS opera de forma recursiva. Ela mantém o controle do valor `f` (custo `g` 
 
 A principal vantagem da RBFS é sua eficiência de espaço, que é linear em relação à profundidade da solução mais rasa (`O(bd)`). Ela também é ótima e completa, assim como A*, *se* conseguir encontrar a solução (o que depende de ter memória suficiente para o caminho em si e a pilha de recursão). No entanto, sua maior desvantagem é a potencial re-geração excessiva de nós. Como ela descarta subárvores ao retroceder para economizar memória, pode ser que precise re-explorar a mesma subárvore múltiplas vezes se os limites `f` mudarem favoravelmente para ela novamente. Esse comportamento pode tornar a RBFS significativamente mais lenta que a A* em termos de tempo, especialmente se os valores `f` dos nós forem muito próximos entre si, levando a muitas mudanças de foco entre diferentes caminhos. Apesar disso, a RBFS é uma alternativa valiosa quando a memória é o principal gargalo para a aplicação da A*.
 
+```python
+import math
+
+# Representação do grafo com custos reais (g) e heurísticas (h)
+grafo = {
+    'A': [('B', 1), ('C', 4)],
+    'B': [('D', 5), ('E', 2)],
+    'C': [('F', 3)],
+    'D': [],
+    'E': [('G', 2)],
+    'F': [('G', 2)],
+    'G': []
+}
+
+# Heurística h(n) estimando a distância de n até o objetivo G
+heuristica = {
+    'A': 7,
+    'B': 6,
+    'C': 5,
+    'D': 7,
+    'E': 4,
+    'F': 2,
+    'G': 0  # objetivo
+}
+
+def rbfs(no, objetivo, g, f_limit):
+    """
+    Implementa a Busca Recursiva Best-First Search (RBFS).
+    
+    :param no: Nó atual
+    :param objetivo: Nó alvo
+    :param g: Custo acumulado até aqui
+    :param f_limit: Limite superior de f(n) aceito até o momento
+    :return: (solução encontrada?, novo f(n) mínimo entre as opções seguintes)
+    """
+    print(f"🔍 Explorando {no} com f_limit={f_limit}")
+
+    if no == objetivo:
+        print(f"✅ Objetivo {objetivo} alcançado!")
+        return True, g + heuristica[no]
+
+    # Gerar sucessores com seus valores f(n) = g + custo + h
+    sucessores = []
+    for vizinho, custo in grafo.get(no, []):
+        f_n = g + custo + heuristica[vizinho]
+        sucessores.append((vizinho, g + custo, f_n))
+
+    if not sucessores:
+        return False, math.inf  # sem sucessores = caminho morto
+
+    while True:
+        # Ordenar sucessores pelo menor f(n)
+        sucessores.sort(key=lambda x: x[2])
+        melhor = sucessores[0]
+        print(f"➡️ Melhor: {melhor[0]} com f={melhor[2]}")
+
+        if melhor[2] > f_limit:
+            return False, melhor[2]  # excede o limite permitido
+
+        # Escolha alternativa mais promissora caso a atual falhe
+        alternativa = sucessores[1][2] if len(sucessores) > 1 else math.inf
+        resultado, novo_f = rbfs(melhor[0], objetivo, melhor[1], min(f_limit, alternativa))
+        sucessores[0] = (melhor[0], melhor[1], novo_f)
+
+        if resultado:
+            return True, novo_f
+
+def iniciar_rbfs(inicio, objetivo):
+    print(f"🚀 Iniciando RBFS de {inicio} até {objetivo}")
+    sucesso, _ = rbfs(inicio, objetivo, 0, math.inf)
+    if sucesso:
+        print("🏁 Caminho encontrado com sucesso!")
+    else:
+        print("❌ Caminho não encontrado.")
+
+
+
+```
+
+
+
 *Referência:* RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.
 
 ---
 
 
 
-### 6.3. Busca em Ambientes Complexos Alternativa: Recozimento Simulado (Simulated Annealing)
+### 5.3. Busca em Ambientes Complexos Alternativa: Recozimento Simulado (Simulated Annealing)
 
 Enquanto a Subida de Encosta (Hill Climbing) é uma técnica de busca local direta que sempre busca melhorias imediatas, ela frequentemente falha ao ficar presa em ótimos locais. O Recozimento Simulado (Simulated Annealing), apresentado por Russell e Norvig (2013) como uma melhoria sobre a subida de encosta, oferece uma solução probabilística para este problema. Inspirado no processo físico de recozimento (annealing) em metalurgia, onde um material é aquecido e depois resfriado lentamente para aumentar o tamanho de seus cristais e reduzir seus defeitos, o algoritmo permite movimentos ocasionais para estados piores, diminuindo a probabilidade desses movimentos ao longo do tempo.
 
@@ -194,13 +309,69 @@ O algoritmo começa em um estado inicial aleatório e, a cada iteração, consid
 
 A grande vantagem do Recozimento Simulado é sua capacidade de encontrar ótimos globais (ou soluções muito próximas a eles) com maior probabilidade do que a Subida de Encosta, justamente por permitir escapar de ótimos locais. No entanto, seu desempenho é muito sensível à escolha do cronograma de resfriamento (como a temperatura inicial, a taxa de decaimento e o critério de parada). Um resfriamento muito rápido pode fazer com que ele se comporte como a Subida de Encosta e fique preso; um resfriamento muito lento pode torná-lo computacionalmente caro. Apesar dessa necessidade de ajuste de parâmetros, o Recozimento Simulado é uma técnica robusta e amplamente utilizada para problemas de otimização combinatória complexos, como o problema do caixeiro viajante, projeto de circuitos e alocação de recursos.
 
+```python
+
+
+import math
+import random
+
+# Função objetivo que queremos maximizar
+def funcao_objetivo(x):
+    return x * math.sin(x)
+
+# Gera um novo vizinho com uma pequena perturbação
+def vizinho(x, intervalo=0.5):
+    return x + random.uniform(-intervalo, intervalo)
+
+# Cronograma de resfriamento simples: temperatura decai lentamente
+def simulated_annealing():
+    # Parâmetros iniciais
+    temperatura_inicial = 1000
+    temperatura_final = 1e-3
+    fator_resfriamento = 0.95
+    max_iter_por_temp = 100
+
+    # Estado inicial aleatório dentro do intervalo [0, 10]
+    estado_atual = random.uniform(0, 10)
+    valor_atual = funcao_objetivo(estado_atual)
+
+    temperatura = temperatura_inicial
+
+    print(f"🚀 Início: x = {estado_atual:.4f}, f(x) = {valor_atual:.4f}")
+
+    while temperatura > temperatura_final:
+        for _ in range(max_iter_por_temp):
+            candidato = vizinho(estado_atual)
+            # Garantir que o candidato continue dentro do intervalo
+            candidato = max(0, min(10, candidato))
+
+            valor_candidato = funcao_objetivo(candidato)
+            delta = valor_candidato - valor_atual
+
+            if delta > 0:
+                # Melhor movimento: sempre aceita
+                estado_atual, valor_atual = candidato, valor_candidato
+            else:
+                # Movimento pior: aceita com probabilidade exp(ΔE / T)
+                probabilidade = math.exp(delta / temperatura)
+                if random.random() < probabilidade:
+                    estado_atual, valor_atual = candidato, valor_candidato
+
+        print(f"🌡️ T = {temperatura:.4f} | Melhor x = {estado_atual:.4f}, f(x) = {valor_atual:.4f}")
+        temperatura *= fator_resfriamento  # Resfriamento
+
+    print(f"\n🏁 Melhor solução encontrada: x = {estado_atual:.4f}, f(x) = {valor_atual:.4f}")
+```
+
+
+
 *Referência:* RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4.
 
 ---
 
 
 
-### 6.4. Algoritmo Genético/Disruptivo Alternativo: Estratégias de Evolução (ES)
+### 5.4. Algoritmo Genético/Disruptivo Alternativo: Estratégias de Evolução (ES)
 
 Dentro do campo da computação evolucionária, os Algoritmos Genéticos (GAs) são talvez os mais conhecidos, mas as Estratégias de Evolução (Evolution Strategies - ES), também mencionadas por Russell e Norvig (2013) no contexto de otimização, representam uma linha de desenvolvimento paralela e distinta, particularmente adequada para problemas de otimização em espaços de parâmetros contínuos. Enquanto os GAs clássicos frequentemente operam sobre representações binárias ou discretas (cromossomos) e dão grande ênfase ao operador de cruzamento (recombinação) para gerar novos indivíduos, as ES tipicamente trabalham diretamente com vetores de números reais que representam as soluções candidatas.
 
@@ -209,6 +380,53 @@ A principal força motriz da evolução nas ES é, muitas vezes, a mutação, e 
 Os mecanismos de seleção nas ES também podem diferir dos GAs. Duas notações comuns são (μ, λ)-ES e (μ + λ)-ES. Na (μ, λ)-ES, μ pais geram λ descendentes (λ ≥ μ), e os μ melhores *descendentes* formam a população da próxima geração, descartando completamente os pais. Isso permite que a ES escape de ótimos locais mais facilmente. Na (μ + λ)-ES, os μ melhores indivíduos são selecionados a partir da união dos μ pais *e* dos λ descendentes, garantindo que a melhor solução encontrada até o momento nunca seja perdida (elitismo). A escolha entre essas estratégias depende das características do problema.
 
 Devido à sua afinidade com espaços contínuos e à adaptação de parâmetros de mutação, as Estratégias de Evolução tornaram-se uma ferramenta poderosa para a otimização de parâmetros em aprendizado de máquina (por exemplo, ajuste de hiperparâmetros ou treinamento direto de redes neurais), robótica, controle e outros domínios onde as soluções são naturalmente representadas por vetores de números reais. Elas oferecem uma alternativa robusta aos GAs quando a representação binária ou o cruzamento tradicional não são os mais adequados.
+
+```python
+
+
+import random
+
+# Função objetivo: queremos minimizar f(x) = x^2
+def funcao_objetivo(x):
+    return x ** 2
+
+# Estratégia de mutação: x' = x + N(0, sigma)
+def mutacao(x, sigma):
+    return x + random.gauss(0, sigma)
+
+def evolution_strategy(mu=10, lamb=40, geracoes=100, sigma_inicial=1.0):
+    # Geração inicial: números reais aleatórios
+    populacao = [random.uniform(-5, 5) for _ in range(mu)]
+    sigma = sigma_inicial
+
+    for geracao in range(geracoes):
+        descendentes = []
+
+        # Cada pai gera λ/mu descendentes
+        for _ in range(lamb):
+            pai = random.choice(populacao)
+            filho = mutacao(pai, sigma)
+            descendentes.append(filho)
+
+        # Combinar pais e descendentes
+        combinados = populacao + descendentes
+
+        # Selecionar os μ melhores
+        populacao = sorted(combinados, key=funcao_objetivo)[:mu]
+
+        # Opcional: adaptar sigma (ex: diminuir ao longo do tempo)
+        sigma *= 0.99
+
+        # Diagnóstico
+        melhor = populacao[0]
+        print(f"🧬 Geração {geracao+1}: Melhor x = {melhor:.4f}, f(x) = {funcao_objetivo(melhor):.4f}, σ = {sigma:.4f}")
+
+    print(f"\n🏁 Solução final: x = {melhor:.4f}, f(x) = {funcao_objetivo(melhor):.4f}")
+
+
+```
+
+
 
 *Referência:* RUSSELL, S. J.; NORVIG, P. *Inteligência artificial*. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4 (mencionado brevemente no contexto de otimização estocástica).
 
