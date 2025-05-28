@@ -1,0 +1,946 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portfólio de Inteligência Artificial">
+      
+      
+        <meta name="author" content="Ana Beatriz Norberto">
+      
+      
+        <link rel="canonical" href="https://ananorberto.github.io/portfolio-ia/portfolio2/portfolio2/">
+      
+      
+      
+      
+      <link rel="icon" href="../../assets/logo_robot.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Portfólio: Resolvendo Problemas por Busca em Inteligência Artificial - Portfólio de IA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Raleway";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#portfolio-resolvendo-problemas-por-busca-em-inteligencia-artificial" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Portfólio de IA" class="md-header__button md-logo" aria-label="Portfólio de IA" data-md-component="logo">
+      
+  <img src="../../assets/logo_robot.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfólio de IA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Portfólio: Resolvendo Problemas por Busca em Inteligência Artificial
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="pt-BR" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio1/introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 1 – Introdução à IA
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfólio de IA" class="md-nav__button md-logo" aria-label="Portfólio de IA" data-md-component="logo">
+      
+  <img src="../../assets/logo_robot.png" alt="logo">
+
+    </a>
+    Portfólio de IA
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio1/introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 1 – Introdução à IA
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-introducao-importancia-e-impacto-da-resolucao-de-problemas-por-busca-na-ia-e-na-sociedade" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Introdução: Importância e Impacto da Resolução de Problemas por Busca na IA e na Sociedade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-apresentacao-dos-conceitos-principais" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Apresentação dos Conceitos Principais
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="portfolio-resolvendo-problemas-por-busca-em-inteligencia-artificial">Portfólio: Resolvendo Problemas por Busca em Inteligência Artificial</h1>
+<h2 id="1-introducao-importancia-e-impacto-da-resolucao-de-problemas-por-busca-na-ia-e-na-sociedade">1. Introdução: Importância e Impacto da Resolução de Problemas por Busca na IA e na Sociedade</h2>
+<p>A Inteligência Artificial (IA) envolve o estudo de agentes que recebem percepções do ambiente e realizam ações. Definimos IA como o estudo da ação racional e, nesse contexto, o planejamento — elaborar um plano de ação para alcançar objetivos — é uma parte crucial da IA.</p>
+<p>A resolução de problemas por busca é uma técnica central em IA para encontrar uma sequência de ações que leve um agente a atingir um objetivo. Newell e Simon argumentaram que esta é a base essencial da resolução de problemas humanos, como um jogador de xadrez examinando movimentos ou um médico considerando diagnósticos alternativos. Embora as primeiras abordagens pudessem ser ineficientes sem orientação adequada, a busca, juntamente com a representação do conhecimento, permanece no cerne da maioria dos trabalhos modernos em IA.</p>
+<p>A busca é uma metodologia de resolução de problemas que explora sistematicamente um espaço de estados, que representa os estágios sucessivos e alternativos no processo de busca pela solução. Exemplos práticos de aplicação da busca incluem layout VLSI (circuitos integrados de larga escala), navegação robótica, sequenciamento de montagem automática e problemas de roteamento. Além disso, a busca tem sido aplicada em áreas como diagnóstico de falhas mecânicas e mesmo no raciocínio baseado em lógica.</p>
+<p>A capacidade de um agente de resolver problemas através da busca permite que ele navegue por ambientes complexos, tome decisões sequenciais e encontre caminhos para atingir metas, tornando-se uma ferramenta indispensável para a criação de sistemas inteligentes.</p>
+<h2 id="2-apresentacao-dos-conceitos-principais">2. Apresentação dos Conceitos Principais</h2>
+<p>A abordagem de resolução de problemas por busca se baseia na ideia de que um agente pode adotar um objetivo e trabalhar para satisfazê-lo. Um agente de solução de problemas é um tipo de agente baseado em objetivos.</p>
+<p>Os principais conceitos envolvidos são:</p>
+<ul>
+<li><strong>Formulaçāo de Objetivo:</strong> O agente adota um ou mais objetivos que deseja alcançar.</li>
+<li><strong>Formulaçāo de Problema:</strong> O agente descreve os estados possíveis do "mundo" e as ações que pode realizar para transitar entre esses estados, visando atingir o objetivo. Estados do mundo podem ser considerados como totalidades sem estrutura interna visível (representação atômica), que é a representação considerada na busca básica.</li>
+<li><strong>Espaço de Estados (State Space):</strong> É uma representação formal do problema. É definido por uma quádrupla <code>[N, A, S, GD]</code>, onde:<ul>
+<li><code>N</code> é o conjunto de nós ou estados do grafo, correspondendo aos estados no processo de resolução do problema.</li>
+<li><code>A</code> é o conjunto de arcos que conectam pares de nós, representando conexões diretas ou ações que levam de um estado a outro.</li>
+<li><code>S</code> é o estado inicial.</li>
+<li><code>GD</code> é a descrição dos estados objetivo, ou seja, a condição que define que o problema foi resolvido.
+Uma solução para um problema é representada como um caminho no grafo do estado inicial a um estado objetivo.</li>
+</ul>
+</li>
+<li><strong>Busca (Search):</strong> Antes de agir, o agente simula sequências de ações em seu modelo (o espaço de estados) para encontrar um caminho que leve ao objetivo. Isso envolve testar sistematicamente caminhos alternativos.</li>
+<li><strong>Execução:</strong> Uma vez encontrado um caminho (solução) pela busca, o agente executa as ações correspondentes no ambiente real.</li>
+<li><strong>Agentes de Solução de Problemas:</strong> São agentes baseados em objetivos que utilizam a busca em representações atômicas de estados para encontrar soluções.</li>
+<li><strong>Estratégias de Busca:</strong> São os algoritmos usados para explorar o espaço de estados. Elas podem ser:<ul>
+<li><strong>Busca Cega (Uninformed Search):</strong> Algoritmos que não utilizam nenhuma informação sobre o quão próximo um estado está do(s) objetivo(s) além da definição do problema.</li>
+<li><strong>Busca Informada (Informed Search):</strong> Algoritmos que utilizam dicas específicas do domínio (heurísticas) sobre a localização dos objetivos para guiar a busca de forma mais eficiente.</li>
+</ul>
+</li>
+<li><strong>Heurísticas:</strong> São funções, denotadas como <code>h(n)</code>, que fornecem uma estimativa do custo do caminho mais econômico do estado no nó <code>n</code> para um estado objetivo. Elas são informações específicas do domínio que podem melhorar significativamente a eficiência da busca.</li>
+<li><strong>Medidas de Performance:</strong> Critérios para avaliar algoritmos de busca:<ul>
+<li><strong>Completude (Completeness):</strong> O algoritmo garante encontrar uma solução quando existe uma, ou reportar a falha corretamente.</li>
+<li><strong>Otimização de Custos (Cost Optimization):</strong> O algoritmo garante encontrar a solução com o menor custo.</li>
+<li><strong>Complexidade de Tempo (Time Complexity):</strong> Quanto tempo leva para encontrar a solução.</li>
+<li><strong>Complexidade de Espaço (Space Complexity):</strong> Quanta memória é necessária para a busca.</li>
+</ul>
+</li>
+<li><strong>Filas:</strong> Estruturas de dados usadas para gerenciar a ordem em que os nós são explorados pelos algoritmos de busca: fila FIFO (First-In, First-Out) para busca em largura, pilha LIFO (Last-In, First-Out) para busca em profundidade, e fila de prioridade para busca <em>best-first</em>. O uso dessas estruturas permite que os algoritmos explorem estados não testados (lista <em>open</em>) e evitem repetir caminhos infrutíferos (lista <em>closed</em>).</li>
+</ul>
+<h1 id="analise-de-algoritmos-para-portfolio-2-de-ia-baseado-em-russell-norvig">Análise de Algoritmos para Portfólio 2 de IA (Baseado em Russell &amp; Norvig)</h1>
+<h2 id="1-algoritmos-de-busca-cega-uninformed-search">1. Algoritmos de Busca Cega (Uninformed Search)</h2>
+<p>Os algoritmos de busca cega, também conhecidos como busca não informada, exploram o espaço de estados sem utilizar qualquer conhecimento específico sobre a proximidade de um estado ao objetivo, baseando-se unicamente na estrutura do problema. Conforme apresentado por Russell e Norvig (2013), as principais estratégias dentro desta categoria incluem:</p>
+<ul>
+<li><strong>Busca em Largura (Breadth-First Search - BFS):</strong> Expande sistematicamente os nós mais rasos e não expandidos primeiro. Garante encontrar a solução mais rasa (ótima em termos de número de passos se os custos forem uniformes), mas pode exigir muita memória.</li>
+<li><strong>Busca de Custo Uniforme (Uniform-Cost Search - UCS):</strong> Expande o nó não expandido com o menor custo de caminho acumulado (<code>g(n)</code>). É ótima e completa, desde que os custos dos passos sejam não negativos. É essencialmente uma generalização da BFS para custos de passo variáveis.</li>
+<li><strong>Busca em Profundidade (Depth-First Search - DFS):</strong> Expande sempre o nó mais profundo na fronteira da árvore de busca. Usa menos memória que a BFS (ordem linear em relação à profundidade máxima), mas não é completa (pode se perder em caminhos infinitos) nem ótima por si só.</li>
+<li><strong>Busca com Aprofundamento Iterativo (Iterative Deepening Depth-First Search - IDDFS ou IDS):</strong> Combina os benefícios da BFS (completude e otimalidade para custos uniformes) e da DFS (requisitos modestos de memória). Realiza buscas em profundidade com limites de profundidade crescentes (1, 2, 3, ...), até encontrar a solução. Embora pareça redundante por repetir expansões, é geralmente o método de busca cega preferido quando o espaço de busca é grande e a profundidade da solução é desconhecida.</li>
+<li><strong>Busca Bidirecional (Bidirectional Search):</strong> Executa duas buscas simultâneas, uma partindo do estado inicial e outra partindo do estado objetivo (se as ações forem reversíveis), parando quando as duas buscas se encontram no meio. Pode reduzir drasticamente a complexidade de tempo e espaço, explorando uma área muito menor do espaço de estados em comparação com buscas unidirecionais.</li>
+</ul>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.</p>
+<hr />
+<h2 id="2-algoritmos-de-busca-informada-heuristica">2. Algoritmos de Busca Informada (Heurística)</h2>
+<p>Os algoritmos de busca informada, ou busca heurística, utilizam conhecimento específico do problema, na forma de uma função heurística <code>h(n)</code>, para estimar a distância (ou custo) de um estado <code>n</code> até o objetivo. Essa informação guia a busca de forma mais eficiente, priorizando caminhos que parecem mais promissores. Russell e Norvig (2013) destacam as seguintes abordagens:</p>
+<ul>
+<li><strong>Busca Best-First Genérica (Generic Best-First Search):</strong> É um paradigma de busca que seleciona o próximo nó a ser expandido com base em uma função de avaliação <code>f(n)</code>. Diferentes algoritmos best-first surgem da escolha de diferentes funções <code>f</code>.</li>
+<li><strong>Busca Best-First Gulosa (Greedy Best-First Search):</strong> Uma instância da busca best-first que tenta expandir o nó que está estimado como o mais próximo do objetivo, usando a função heurística diretamente como função de avaliação: <code>f(n) = h(n)</code>. Embora possa ser rápida, não é ótima nem completa.</li>
+<li><strong>Busca A<em> (A</em> Search):</strong> Considerado o algoritmo de busca heurística mais conhecido, A<em> combina o custo do caminho percorrido desde o início (<code>g(n)</code>) com a estimativa heurística do custo restante até o objetivo (<code>h(n)</code>), utilizando a função de avaliação <code>f(n) = g(n) + h(n)</code>. A</em> é completo e ótimo, desde que a heurística <code>h(n)</code> seja admissível (nunca superestima o custo real) e, para eficiência ótima, consistente. É amplamente utilizado em problemas de planejamento de caminhos e outros.</li>
+<li><strong>Buscas Heurísticas com Memória Limitada:</strong> Como A* pode consumir muita memória, foram desenvolvidas variantes que operam com restrições de espaço:<ul>
+<li><strong>Busca Recursiva Best-First (Recursive Best-First Search - RBFS):</strong> Simula a operação de A* usando apenas espaço linear. Faz isso explorando um caminho e mantendo o valor <code>f</code> do melhor caminho alternativo a partir de seus ancestrais. Se o custo do caminho atual exceder esse valor limite, ele retrocede e explora o caminho alternativo. Pode sofrer de recomputação excessiva.</li>
+<li><strong>SMA<em> (Simplified Memory-Bounded A</em>):</strong> Utiliza toda a memória disponível. Expande os melhores nós folha até que a memória esteja cheia. Nesse ponto, remove o nó folha com o maior valor <code>f</code> (o pior) para liberar espaço para um novo nó. É completo se houver memória suficiente para armazenar o caminho da solução mais rasa e ótimo se encontrar uma solução.</li>
+</ul>
+</li>
+<li><strong>Aprendizado de Heurísticas (Learning Heuristics):</strong> Abordagens onde a função heurística não é dada a priori, mas aprendida a partir da experiência ou de exemplos do problema, como resolver subproblemas mais simples (bases de dados de padrões) ou através de aprendizado indutivo.</li>
+</ul>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.</p>
+<hr />
+<h2 id="3-algoritmos-de-busca-em-ambientes-complexos">3. Algoritmos de Busca em Ambientes Complexos</h2>
+<p>Ambientes complexos apresentam desafios adicionais em relação à busca clássica, como a necessidade de otimizar uma função objetivo sem se preocupar com o caminho, lidar com múltiplos agentes com objetivos conflitantes, agir sob incerteza ou com informações parciais. Russell e Norvig (2013) abordam diversas técnicas para esses cenários:</p>
+<ul>
+<li><strong>Busca Local (Local Search):</strong> Utilizada principalmente em problemas de otimização, onde o objetivo é encontrar o estado com o melhor valor de uma função objetivo, e o caminho até ele não importa. Esses algoritmos mantêm apenas um estado atual (ou um pequeno conjunto) e tentam melhorá-lo movendo-se para estados vizinhos.<ul>
+<li><em>Subida de Encosta (Hill Climbing):</em> Move-se continuamente em direção a um valor crescente da função objetivo. É simples e eficiente em memória, mas suscetível a máximos locais, platôs e cumeeiras.</li>
+<li><em>Subida de Encosta com Reinício Aleatório (Random-Restart Hill Climbing):</em> Executa a subida de encosta múltiplas vezes a partir de estados iniciais aleatórios para aumentar a chance de encontrar o ótimo global.</li>
+<li><em>Recozimento Simulado (Simulated Annealing):</em> Permite movimentos para estados piores com uma probabilidade que diminui ao longo do tempo (controlada por uma "temperatura"), ajudando a escapar de máximos locais.</li>
+<li><em>Busca de Feixe Local (Local Beam Search):</em> Mantém <code>k</code> estados em paralelo. Em cada passo, gera todos os sucessores dos <code>k</code> estados e seleciona os <code>k</code> melhores sucessores para a próxima iteração. É menos suscetível a máximos locais que a subida de encosta simples.</li>
+<li><em>Busca de Feixe Local Estocástica (Stochastic Beam Search):</em> Similar à busca de feixe local, mas escolhe os <code>k</code> sucessores com probabilidade proporcional à sua qualidade, introduzindo aleatoriedade.</li>
+</ul>
+</li>
+<li><strong>Busca Adversária (Adversarial Search - Jogos):</strong> Projetada para ambientes competitivos com dois ou mais agentes (jogadores) com objetivos opostos. O objetivo é encontrar a melhor estratégia (sequência de movimentos) considerando as possíveis respostas do adversário.<ul>
+<li><em>Algoritmo Minimax:</em> Para jogos de soma zero com informação perfeita, calcula o movimento ótimo assumindo que o adversário também jogará otimamente para minimizar a utilidade do jogador.</li>
+<li><em>Poda Alfa-Beta (Alpha-Beta Pruning):</em> Otimização do Minimax que descarta ramos da árvore de busca que não influenciarão a decisão final, reduzindo drasticamente o número de nós a serem explorados.</li>
+<li><em>Funções de Avaliação Heurística:</em> Usadas em jogos complexos (como xadrez) onde a árvore completa é intratável. Estimam a utilidade esperada de um estado sem explorar até o final do jogo.</li>
+<li><em>Busca em Árvore Monte Carlo (Monte Carlo Tree Search - MCTS):</em> Abordagem probabilística que equilibra exploração e explotação, realizando simulações aleatórias (playouts) a partir do estado atual para estimar o valor dos movimentos. Muito eficaz em jogos como Go.</li>
+</ul>
+</li>
+<li><strong>Busca Online (Online Search):</strong> Aplicada quando o agente precisa agir em um ambiente antes de conhecer completamente o espaço de estados ou os resultados das ações. O agente intercala computação (planejamento) e execução, aprendendo sobre o ambiente à medida que se move.<ul>
+<li><em>Agentes de Busca Online:</em> Precisam tomar decisões com informações limitadas, explorando o ambiente e atualizando seu conhecimento.</li>
+<li><em>LRTA</em> (Learning Real-Time A<em>):</em> Um exemplo de algoritmo de busca online que aprende custos heurísticos à medida que explora o ambiente.</li>
+</ul>
+</li>
+<li><strong>Busca com Ações Não Determinísticas ou Observações Parciais:</strong> Lida com incerteza nos resultados das ações ou na percepção do estado atual.<ul>
+<li><em>Busca AND-OR:</em> Utilizada para encontrar planos de contingência que funcionam independentemente do resultado de ações não determinísticas.</li>
+<li><em>Busca no Espaço de Crenças (Belief State Search):</em> Quando o ambiente é parcialmente observável, o agente mantém um estado de crença (uma distribuição de probabilidade sobre os estados possíveis) e busca no espaço desses estados de crença. Relevante para POMDPs (Processos de Decisão de Markov Parcialmente Observáveis).</li>
+</ul>
+</li>
+</ul>
+<p><em>Referências:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulos 4 (Busca Local, Otimização), 5 (Busca Adversária), partes dos Capítulos 4 e 12 (Busca Online, Incerteza).</p>
+<hr />
+<h2 id="4-algoritmos-geneticos-e-evolucionarios">4. Algoritmos Genéticos e Evolucionários</h2>
+<p>Os Algoritmos Genéticos (AGs) pertencem a uma classe mais ampla de algoritmos evolucionários, que se inspiram na evolução biológica para resolver problemas de busca e otimização. Eles operam sobre uma população de soluções candidatas, aplicando operadores como seleção, recombinação (cruzamento) e mutação para gerar novas populações com aptidão progressivamente maior. Russell e Norvig (2013) discutem essas abordagens no contexto da busca local estocástica e otimização:</p>
+<ul>
+<li><strong>Algoritmos Genéticos (Genetic Algorithms - GAs):</strong> Os AGs mantêm uma população de estados candidatos (representados como strings ou cromossomos) e geram a próxima geração combinando pares de indivíduos (cruzamento) e introduzindo pequenas alterações aleatórias (mutação). A seleção dos pais geralmente favorece indivíduos com maior aptidão (fitness), que mede a qualidade da solução representada pelo indivíduo.</li>
+<li><strong>Programação Genética (Genetic Programming - GP):</strong> Uma variante dos AGs onde os indivíduos na população são programas de computador (geralmente representados como árvores de expressão) em vez de strings. O objetivo é evoluir um programa que resolva uma tarefa específica. Os operadores de cruzamento e mutação são adaptados para manipular essas estruturas de programa.</li>
+<li><strong>Estratégias de Evolução (Evolution Strategies - ES):</strong> Outra abordagem evolucionária, frequentemente usada para otimização de parâmetros em espaços contínuos. Diferentemente dos AGs clássicos que operam em representações binárias ou discretas e enfatizam o cruzamento, as ES geralmente trabalham com vetores de números reais e focam mais na mutação (frequentemente usando distribuições gaussianas) e na seleção determinística ou probabilística dos melhores indivíduos (pais e/ou filhos) para formar a próxima geração.</li>
+</ul>
+<p>Esses algoritmos são considerados "disruptivos" ou estocásticos porque introduzem aleatoriedade e operam em populações, permitindo-lhes explorar diferentes regiões do espaço de busca simultaneamente e escapar de ótimos locais onde algoritmos mais determinísticos como a subida de encosta poderiam ficar presos.</p>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4 (particularmente a seção sobre algoritmos genéticos).</p>
+<!-- comentário 
+## 5. Sugestões de Algoritmos Alternativos
+
+Considerando os algoritmos já presentes em seu portfólio (BFS, A*, Hill Climbing e GA) e a lista de algoritmos disponíveis em Russell e Norvig (2013), sugiro as seguintes alternativas interessantes para cada categoria, que provavelmente diferem dos exemplos dados em sala:
+
+*   **Para Busca Cega:** Em vez de BFS, sugiro a **Busca com Aprofundamento Iterativo (Iterative Deepening Depth-First Search - IDDFS)**. Este algoritmo combina a completude e otimalidade (para custos uniformes) da BFS com a eficiência de memória da DFS, sendo uma escolha robusta quando a profundidade da solução é desconhecida.
+*   **Para Busca Informada:** Como alternativa ao A*, proponho a **Busca Recursiva Best-First (Recursive Best-First Search - RBFS)**. Ela tenta emular a A* usando espaço de memória linear, o que a torna útil em problemas onde a memória é uma restrição significativa, embora possa recomputar nós.
+*   **Para Busca em Ambientes Complexos:** No lugar da Subida de Encosta, sugiro o **Recozimento Simulado (Simulated Annealing)**. É um algoritmo de busca local estocástico que permite movimentos para estados piores com uma probabilidade decrescente, o que o ajuda a escapar de ótimos locais onde a Subida de Encosta poderia ficar presa.
+*   **Para Algoritmos Genéticos/Disruptivos:** Como alternativa ao Algoritmo Genético clássico, sugiro as **Estratégias de Evolução (Evolution Strategies - ES)**. Embora compartilhem a inspiração evolucionária, as ES frequentemente operam em espaços contínuos e utilizam mecanismos de mutação e seleção distintos dos AGs tradicionais, focando mais na otimização de parâmetros.
+
+A seguir, apresentarei uma explicação detalhada para cada um desses algoritmos selecionados.
+
+---
+-->
+
+<h3 id="51-busca-cega-alternativa-busca-com-aprofundamento-iterativo-iddfs">5.1. Busca Cega Alternativa: Busca com Aprofundamento Iterativo (IDDFS)</h3>
+<p>A Busca com Aprofundamento Iterativo (Iterative Deepening Depth-First Search - IDDFS), conforme descrita por Russell e Norvig (2013), representa uma engenhosa combinação das vantagens da Busca em Largura (BFS) e da Busca em Profundidade (DFS). Enquanto a BFS garante encontrar a solução mais rasa (ótima em termos de número de passos para custos uniformes) e é completa, ela sofre com altos requisitos de memória, que podem crescer exponencialmente com a profundidade. Por outro lado, a DFS possui requisitos de memória modestos (lineares em relação à profundidade máxima), mas não é completa em espaços de estados infinitos ou com ciclos, e não garante otimalidade.</p>
+<p>A IDDFS supera essas limitações realizando repetidas buscas em profundidade, mas com um limite de profundidade crescente. Ela começa com uma busca em profundidade limitada à profundidade 0 (apenas o nó inicial). Se a solução não for encontrada, ela descarta os nós gerados e inicia uma nova busca em profundidade, desta vez com limite 1. Esse processo continua, incrementando o limite de profundidade (2, 3, 4, ...) a cada iteração, até que uma solução seja encontrada no limite de profundidade atual <code>d</code>. Como ela explora todos os nós até a profundidade <code>d-1</code> antes de explorar qualquer nó na profundidade <code>d</code>, ela efetivamente simula a ordem de expansão da BFS, garantindo que a primeira solução encontrada seja a mais rasa (e, portanto, ótima se os custos dos passos forem uniformes).</p>
+<p>A principal preocupação com a IDDFS é a aparente redundância, já que os nós nos níveis superiores da árvore de busca são gerados múltiplas vezes em diferentes iterações. No entanto, Russell e Norvig (2013) demonstram que, para árvores de busca onde a maioria dos nós está no nível mais baixo (o que é comum em muitos problemas, especialmente com fatores de ramificação maiores que 1), o custo adicional de regenerar os nós superiores é relativamente pequeno em comparação com o custo de explorar o último nível. A complexidade de tempo da IDDFS acaba sendo da mesma ordem de magnitude que a da BFS (O(b^d)), enquanto sua complexidade de espaço é a mesma da DFS (O(bd)), onde <code>b</code> é o fator de ramificação e <code>d</code> é a profundidade da solução mais rasa. Essa combinação de completude, otimalidade (para custos uniformes) e eficiência de memória torna a IDDFS a estratégia de busca cega preferida em muitas situações onde o espaço de estados é grande e a profundidade da solução é desconhecida.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Representação de um grafo simples como dicionário</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">grafo</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="s1">&#39;D&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;E&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;F&#39;</span><span class="p">],</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>    <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[]</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="p">}</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="k">def</span><span class="w"> </span><span class="nf">dfs_limitado</span><span class="p">(</span><span class="n">grafo</span><span class="p">,</span> <span class="n">no_atual</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">limite</span><span class="p">):</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="sd">    Busca em profundidade limitada a um certo nível.</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="sd">    :param grafo: Dicionário representando o grafo</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="sd">    :param no_atual: Nó atual na busca</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="sd">    :param objetivo: Nó que queremos encontrar</span>
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="sd">    :param limite: Profundidade máxima permitida</span>
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="sd">    :return: True se o objetivo for encontrado, False caso contrário</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22" href="#__codelineno-0-22"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Visitando </span><span class="si">{</span><span class="n">no_atual</span><span class="si">}</span><span class="s2">, limite restante: </span><span class="si">{</span><span class="n">limite</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23" href="#__codelineno-0-23"></a>
+<a id="__codelineno-0-24" name="__codelineno-0-24" href="#__codelineno-0-24"></a>    <span class="k">if</span> <span class="n">no_atual</span> <span class="o">==</span> <span class="n">objetivo</span><span class="p">:</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25" href="#__codelineno-0-25"></a>        <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-26" name="__codelineno-0-26" href="#__codelineno-0-26"></a>    <span class="k">if</span> <span class="n">limite</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27" href="#__codelineno-0-27"></a>        <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28" href="#__codelineno-0-28"></a>
+<a id="__codelineno-0-29" name="__codelineno-0-29" href="#__codelineno-0-29"></a>    <span class="k">for</span> <span class="n">vizinho</span> <span class="ow">in</span> <span class="n">grafo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">no_atual</span><span class="p">,</span> <span class="p">[]):</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30" href="#__codelineno-0-30"></a>        <span class="k">if</span> <span class="n">dfs_limitado</span><span class="p">(</span><span class="n">grafo</span><span class="p">,</span> <span class="n">vizinho</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">limite</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>            <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33" href="#__codelineno-0-33"></a>
+<a id="__codelineno-0-34" name="__codelineno-0-34" href="#__codelineno-0-34"></a><span class="k">def</span><span class="w"> </span><span class="nf">iddfs</span><span class="p">(</span><span class="n">grafo</span><span class="p">,</span> <span class="n">inicio</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">limite_maximo</span><span class="p">):</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35" href="#__codelineno-0-35"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-0-36" name="__codelineno-0-36" href="#__codelineno-0-36"></a><span class="sd">    Busca com Aprofundamento Iterativo (IDDFS).</span>
+<a id="__codelineno-0-37" name="__codelineno-0-37" href="#__codelineno-0-37"></a>
+<a id="__codelineno-0-38" name="__codelineno-0-38" href="#__codelineno-0-38"></a><span class="sd">    :param grafo: Dicionário com os nós e vizinhos</span>
+<a id="__codelineno-0-39" name="__codelineno-0-39" href="#__codelineno-0-39"></a><span class="sd">    :param inicio: Nó inicial da busca</span>
+<a id="__codelineno-0-40" name="__codelineno-0-40" href="#__codelineno-0-40"></a><span class="sd">    :param objetivo: Nó que queremos encontrar</span>
+<a id="__codelineno-0-41" name="__codelineno-0-41" href="#__codelineno-0-41"></a><span class="sd">    :param limite_maximo: Profundidade máxima de busca</span>
+<a id="__codelineno-0-42" name="__codelineno-0-42" href="#__codelineno-0-42"></a><span class="sd">    :return: True se encontrou o objetivo, False caso contrário</span>
+<a id="__codelineno-0-43" name="__codelineno-0-43" href="#__codelineno-0-43"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-0-44" name="__codelineno-0-44" href="#__codelineno-0-44"></a>    <span class="k">for</span> <span class="n">profundidade</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">limite_maximo</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+<a id="__codelineno-0-45" name="__codelineno-0-45" href="#__codelineno-0-45"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔁 Profundidade atual: </span><span class="si">{</span><span class="n">profundidade</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-46" name="__codelineno-0-46" href="#__codelineno-0-46"></a>        <span class="k">if</span> <span class="n">dfs_limitado</span><span class="p">(</span><span class="n">grafo</span><span class="p">,</span> <span class="n">inicio</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">profundidade</span><span class="p">):</span>
+<a id="__codelineno-0-47" name="__codelineno-0-47" href="#__codelineno-0-47"></a>            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Objetivo &#39;</span><span class="si">{</span><span class="n">objetivo</span><span class="si">}</span><span class="s2">&#39; encontrado na profundidade </span><span class="si">{</span><span class="n">profundidade</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-48" name="__codelineno-0-48" href="#__codelineno-0-48"></a>            <span class="k">return</span> <span class="kc">True</span>
+<a id="__codelineno-0-49" name="__codelineno-0-49" href="#__codelineno-0-49"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">❌ Objetivo &#39;</span><span class="si">{</span><span class="n">objetivo</span><span class="si">}</span><span class="s2">&#39; não encontrado até a profundidade </span><span class="si">{</span><span class="n">limite_maximo</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+<a id="__codelineno-0-50" name="__codelineno-0-50" href="#__codelineno-0-50"></a>    <span class="k">return</span> <span class="kc">False</span>
+<a id="__codelineno-0-51" name="__codelineno-0-51" href="#__codelineno-0-51"></a>
+<a id="__codelineno-0-52" name="__codelineno-0-52" href="#__codelineno-0-52"></a><span class="c1"># Executa o algoritmo procurando o nó &#39;F&#39; a partir do nó &#39;A&#39; com profundidade máxima 3</span>
+<a id="__codelineno-0-53" name="__codelineno-0-53" href="#__codelineno-0-53"></a><span class="n">iddfs</span><span class="p">(</span><span class="n">grafo</span><span class="p">,</span> <span class="s1">&#39;A&#39;</span><span class="p">,</span> <span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.</p>
+<hr />
+<h3 id="52-busca-informada-alternativa-busca-recursiva-best-first-rbfs">5.2. Busca Informada Alternativa: Busca Recursiva Best-First (RBFS)</h3>
+<p>A Busca A<em> é renomada por sua otimalidade e completude quando usada com heurísticas admissíveis, mas sua principal desvantagem reside na potencial necessidade exponencial de memória para armazenar a fronteira (nós abertos). Para contornar essa limitação, Russell e Norvig (2013) apresentam a Busca Recursiva Best-First (Recursive Best-First Search - RBFS), um algoritmo que visa mimetizar a operação da A</em> utilizando apenas espaço linear, similar à busca em profundidade.</p>
+<p>A RBFS opera de forma recursiva. Ela mantém o controle do valor <code>f</code> (custo <code>g</code> + heurística <code>h</code>) do melhor caminho alternativo disponível a partir do ancestral do nó atual (um limite superior, <code>f_limit</code>). A função recursiva explora um caminho enquanto o valor <code>f</code> dos nós nesse caminho não excede esse limite. Se um nó folha é alcançado e representa uma solução, a busca termina com sucesso. Se todos os caminhos a partir de um nó excedem o <code>f_limit</code>, a recursão retrocede (backtracks) para o nó ancestral. Crucialmente, ao retroceder, a RBFS atualiza o valor <code>f</code> do nó que acabou de explorar para refletir o melhor valor <code>f</code> encontrado em seus descendentes (incluindo aqueles que excederam o limite). Esse valor atualizado pode então guiar a busca futura, potencialmente fazendo com que a RBFS decida explorar um caminho diferente que antes parecia menos promissor, mas cujo valor <code>f</code> agora é o melhor abaixo do limite.</p>
+<p>A principal vantagem da RBFS é sua eficiência de espaço, que é linear em relação à profundidade da solução mais rasa (<code>O(bd)</code>). Ela também é ótima e completa, assim como A<em>, </em>se<em> conseguir encontrar a solução (o que depende de ter memória suficiente para o caminho em si e a pilha de recursão). No entanto, sua maior desvantagem é a potencial re-geração excessiva de nós. Como ela descarta subárvores ao retroceder para economizar memória, pode ser que precise re-explorar a mesma subárvore múltiplas vezes se os limites <code>f</code> mudarem favoravelmente para ela novamente. Esse comportamento pode tornar a RBFS significativamente mais lenta que a A</em> em termos de tempo, especialmente se os valores <code>f</code> dos nós forem muito próximos entre si, levando a muitas mudanças de foco entre diferentes caminhos. Apesar disso, a RBFS é uma alternativa valiosa quando a memória é o principal gargalo para a aplicação da A*.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="c1"># Representação do grafo com custos reais (g) e heurísticas (h)</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="n">grafo</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;B&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;C&#39;</span><span class="p">,</span> <span class="mi">4</span><span class="p">)],</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;D&#39;</span><span class="p">,</span> <span class="mi">5</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;E&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;F&#39;</span><span class="p">,</span> <span class="mi">3</span><span class="p">)],</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="p">[],</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="p">[(</span><span class="s1">&#39;G&#39;</span><span class="p">,</span> <span class="mi">2</span><span class="p">)],</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="p">[]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># Heurística h(n) estimando a distância de n até o objetivo G</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="n">heuristica</span> <span class="o">=</span> <span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    <span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>    <span class="s1">&#39;B&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    <span class="s1">&#39;C&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>    <span class="s1">&#39;D&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>    <span class="s1">&#39;E&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    <span class="s1">&#39;F&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    <span class="s1">&#39;G&#39;</span><span class="p">:</span> <span class="mi">0</span>  <span class="c1"># objetivo</span>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="p">}</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="k">def</span><span class="w"> </span><span class="nf">rbfs</span><span class="p">(</span><span class="n">no</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">f_limit</span><span class="p">):</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a><span class="sd">    Implementa a Busca Recursiva Best-First Search (RBFS).</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a><span class="sd">    :param no: Nó atual</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a><span class="sd">    :param objetivo: Nó alvo</span>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="sd">    :param g: Custo acumulado até aqui</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="sd">    :param f_limit: Limite superior de f(n) aceito até o momento</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a><span class="sd">    :return: (solução encontrada?, novo f(n) mínimo entre as opções seguintes)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a><span class="sd">    &quot;&quot;&quot;</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🔍 Explorando </span><span class="si">{</span><span class="n">no</span><span class="si">}</span><span class="s2"> com f_limit=</span><span class="si">{</span><span class="n">f_limit</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>    <span class="k">if</span> <span class="n">no</span> <span class="o">==</span> <span class="n">objetivo</span><span class="p">:</span>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;✅ Objetivo </span><span class="si">{</span><span class="n">objetivo</span><span class="si">}</span><span class="s2"> alcançado!&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a>        <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">g</span> <span class="o">+</span> <span class="n">heuristica</span><span class="p">[</span><span class="n">no</span><span class="p">]</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a>    <span class="c1"># Gerar sucessores com seus valores f(n) = g + custo + h</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a>    <span class="n">sucessores</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a>    <span class="k">for</span> <span class="n">vizinho</span><span class="p">,</span> <span class="n">custo</span> <span class="ow">in</span> <span class="n">grafo</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">no</span><span class="p">,</span> <span class="p">[]):</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>        <span class="n">f_n</span> <span class="o">=</span> <span class="n">g</span> <span class="o">+</span> <span class="n">custo</span> <span class="o">+</span> <span class="n">heuristica</span><span class="p">[</span><span class="n">vizinho</span><span class="p">]</span>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a>        <span class="n">sucessores</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">vizinho</span><span class="p">,</span> <span class="n">g</span> <span class="o">+</span> <span class="n">custo</span><span class="p">,</span> <span class="n">f_n</span><span class="p">))</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a>    <span class="k">if</span> <span class="ow">not</span> <span class="n">sucessores</span><span class="p">:</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a>        <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">inf</span>  <span class="c1"># sem sucessores = caminho morto</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a>    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a>        <span class="c1"># Ordenar sucessores pelo menor f(n)</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a>        <span class="n">sucessores</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a>        <span class="n">melhor</span> <span class="o">=</span> <span class="n">sucessores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;➡️ Melhor: </span><span class="si">{</span><span class="n">melhor</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="si">}</span><span class="s2"> com f=</span><span class="si">{</span><span class="n">melhor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a>        <span class="k">if</span> <span class="n">melhor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">f_limit</span><span class="p">:</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a>            <span class="k">return</span> <span class="kc">False</span><span class="p">,</span> <span class="n">melhor</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>  <span class="c1"># excede o limite permitido</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>        <span class="c1"># Escolha alternativa mais promissora caso a atual falhe</span>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a>        <span class="n">alternativa</span> <span class="o">=</span> <span class="n">sucessores</span><span class="p">[</span><span class="mi">1</span><span class="p">][</span><span class="mi">2</span><span class="p">]</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sucessores</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="n">math</span><span class="o">.</span><span class="n">inf</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a>        <span class="n">resultado</span><span class="p">,</span> <span class="n">novo_f</span> <span class="o">=</span> <span class="n">rbfs</span><span class="p">(</span><span class="n">melhor</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">objetivo</span><span class="p">,</span> <span class="n">melhor</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="nb">min</span><span class="p">(</span><span class="n">f_limit</span><span class="p">,</span> <span class="n">alternativa</span><span class="p">))</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a>        <span class="n">sucessores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">melhor</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">melhor</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">novo_f</span><span class="p">)</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>        <span class="k">if</span> <span class="n">resultado</span><span class="p">:</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a>            <span class="k">return</span> <span class="kc">True</span><span class="p">,</span> <span class="n">novo_f</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="k">def</span><span class="w"> </span><span class="nf">iniciar_rbfs</span><span class="p">(</span><span class="n">inicio</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">):</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚀 Iniciando RBFS de </span><span class="si">{</span><span class="n">inicio</span><span class="si">}</span><span class="s2"> até </span><span class="si">{</span><span class="n">objetivo</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a>    <span class="n">sucesso</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">rbfs</span><span class="p">(</span><span class="n">inicio</span><span class="p">,</span> <span class="n">objetivo</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">math</span><span class="o">.</span><span class="n">inf</span><span class="p">)</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a>    <span class="k">if</span> <span class="n">sucesso</span><span class="p">:</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;🏁 Caminho encontrado com sucesso!&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a>    <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-1-73" name="__codelineno-1-73" href="#__codelineno-1-73"></a>        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;❌ Caminho não encontrado.&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 3.</p>
+<hr />
+<h3 id="53-busca-em-ambientes-complexos-alternativa-recozimento-simulado-simulated-annealing">5.3. Busca em Ambientes Complexos Alternativa: Recozimento Simulado (Simulated Annealing)</h3>
+<p>Enquanto a Subida de Encosta (Hill Climbing) é uma técnica de busca local direta que sempre busca melhorias imediatas, ela frequentemente falha ao ficar presa em ótimos locais. O Recozimento Simulado (Simulated Annealing), apresentado por Russell e Norvig (2013) como uma melhoria sobre a subida de encosta, oferece uma solução probabilística para este problema. Inspirado no processo físico de recozimento (annealing) em metalurgia, onde um material é aquecido e depois resfriado lentamente para aumentar o tamanho de seus cristais e reduzir seus defeitos, o algoritmo permite movimentos ocasionais para estados piores, diminuindo a probabilidade desses movimentos ao longo do tempo.</p>
+<p>O algoritmo começa em um estado inicial aleatório e, a cada iteração, considera um movimento para um vizinho aleatório. Se o vizinho for melhor (maior valor na função objetivo para maximização, ou menor para minimização), o movimento é sempre aceito. Se o vizinho for pior, ele ainda pode ser aceito com uma certa probabilidade, que depende de dois fatores: quão pior é o vizinho (a diferença de valor, <code>ΔE</code>) e um parâmetro chamado "temperatura" (<code>T</code>). A probabilidade de aceitar um movimento pior é tipicamente dada por <code>exp(ΔE / T)</code> (para maximização, onde <code>ΔE</code> seria negativo e menor; para minimização, seria <code>exp(-ΔE / T)</code> com <code>ΔE</code> positivo). No início, a temperatura <code>T</code> é alta, permitindo que muitos movimentos ruins sejam aceitos, o que possibilita ao algoritmo explorar amplamente o espaço de busca e escapar de ótimos locais iniciais. Gradualmente, a temperatura é reduzida de acordo com um "cronograma de resfriamento" (cooling schedule). À medida que <code>T</code> diminui, a probabilidade de aceitar movimentos ruins também diminui, fazendo com que o algoritmo se concentre cada vez mais em melhorias locais, convergindo eventualmente para um estado de baixa energia (alta qualidade).</p>
+<p>A grande vantagem do Recozimento Simulado é sua capacidade de encontrar ótimos globais (ou soluções muito próximas a eles) com maior probabilidade do que a Subida de Encosta, justamente por permitir escapar de ótimos locais. No entanto, seu desempenho é muito sensível à escolha do cronograma de resfriamento (como a temperatura inicial, a taxa de decaimento e o critério de parada). Um resfriamento muito rápido pode fazer com que ele se comporte como a Subida de Encosta e fique preso; um resfriamento muito lento pode torná-lo computacionalmente caro. Apesar dessa necessidade de ajuste de parâmetros, o Recozimento Simulado é uma técnica robusta e amplamente utilizada para problemas de otimização combinatória complexos, como o problema do caixeiro viajante, projeto de circuitos e alocação de recursos.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">math</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="c1"># Função objetivo que queremos maximizar</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="k">def</span><span class="w"> </span><span class="nf">funcao_objetivo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">*</span> <span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="c1"># Gera um novo vizinho com uma pequena perturbação</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="k">def</span><span class="w"> </span><span class="nf">vizinho</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">intervalo</span><span class="o">=</span><span class="mf">0.5</span><span class="p">):</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="n">intervalo</span><span class="p">,</span> <span class="n">intervalo</span><span class="p">)</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1"># Cronograma de resfriamento simples: temperatura decai lentamente</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="k">def</span><span class="w"> </span><span class="nf">simulated_annealing</span><span class="p">():</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>    <span class="c1"># Parâmetros iniciais</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>    <span class="n">temperatura_inicial</span> <span class="o">=</span> <span class="mi">1000</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>    <span class="n">temperatura_final</span> <span class="o">=</span> <span class="mf">1e-3</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>    <span class="n">fator_resfriamento</span> <span class="o">=</span> <span class="mf">0.95</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    <span class="n">max_iter_por_temp</span> <span class="o">=</span> <span class="mi">100</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>    <span class="c1"># Estado inicial aleatório dentro do intervalo [0, 10]</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>    <span class="n">estado_atual</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">10</span><span class="p">)</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>    <span class="n">valor_atual</span> <span class="o">=</span> <span class="n">funcao_objetivo</span><span class="p">(</span><span class="n">estado_atual</span><span class="p">)</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>    <span class="n">temperatura</span> <span class="o">=</span> <span class="n">temperatura_inicial</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🚀 Início: x = </span><span class="si">{</span><span class="n">estado_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, f(x) = </span><span class="si">{</span><span class="n">valor_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>    <span class="k">while</span> <span class="n">temperatura</span> <span class="o">&gt;</span> <span class="n">temperatura_final</span><span class="p">:</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">max_iter_por_temp</span><span class="p">):</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>            <span class="n">candidato</span> <span class="o">=</span> <span class="n">vizinho</span><span class="p">(</span><span class="n">estado_atual</span><span class="p">)</span>
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>            <span class="c1"># Garantir que o candidato continue dentro do intervalo</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>            <span class="n">candidato</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">min</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="n">candidato</span><span class="p">))</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>            <span class="n">valor_candidato</span> <span class="o">=</span> <span class="n">funcao_objetivo</span><span class="p">(</span><span class="n">candidato</span><span class="p">)</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35" href="#__codelineno-2-35"></a>            <span class="n">delta</span> <span class="o">=</span> <span class="n">valor_candidato</span> <span class="o">-</span> <span class="n">valor_atual</span>
+<a id="__codelineno-2-36" name="__codelineno-2-36" href="#__codelineno-2-36"></a>
+<a id="__codelineno-2-37" name="__codelineno-2-37" href="#__codelineno-2-37"></a>            <span class="k">if</span> <span class="n">delta</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<a id="__codelineno-2-38" name="__codelineno-2-38" href="#__codelineno-2-38"></a>                <span class="c1"># Melhor movimento: sempre aceita</span>
+<a id="__codelineno-2-39" name="__codelineno-2-39" href="#__codelineno-2-39"></a>                <span class="n">estado_atual</span><span class="p">,</span> <span class="n">valor_atual</span> <span class="o">=</span> <span class="n">candidato</span><span class="p">,</span> <span class="n">valor_candidato</span>
+<a id="__codelineno-2-40" name="__codelineno-2-40" href="#__codelineno-2-40"></a>            <span class="k">else</span><span class="p">:</span>
+<a id="__codelineno-2-41" name="__codelineno-2-41" href="#__codelineno-2-41"></a>                <span class="c1"># Movimento pior: aceita com probabilidade exp(ΔE / T)</span>
+<a id="__codelineno-2-42" name="__codelineno-2-42" href="#__codelineno-2-42"></a>                <span class="n">probabilidade</span> <span class="o">=</span> <span class="n">math</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">delta</span> <span class="o">/</span> <span class="n">temperatura</span><span class="p">)</span>
+<a id="__codelineno-2-43" name="__codelineno-2-43" href="#__codelineno-2-43"></a>                <span class="k">if</span> <span class="n">random</span><span class="o">.</span><span class="n">random</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">probabilidade</span><span class="p">:</span>
+<a id="__codelineno-2-44" name="__codelineno-2-44" href="#__codelineno-2-44"></a>                    <span class="n">estado_atual</span><span class="p">,</span> <span class="n">valor_atual</span> <span class="o">=</span> <span class="n">candidato</span><span class="p">,</span> <span class="n">valor_candidato</span>
+<a id="__codelineno-2-45" name="__codelineno-2-45" href="#__codelineno-2-45"></a>
+<a id="__codelineno-2-46" name="__codelineno-2-46" href="#__codelineno-2-46"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🌡️ T = </span><span class="si">{</span><span class="n">temperatura</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2"> | Melhor x = </span><span class="si">{</span><span class="n">estado_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, f(x) = </span><span class="si">{</span><span class="n">valor_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-2-47" name="__codelineno-2-47" href="#__codelineno-2-47"></a>        <span class="n">temperatura</span> <span class="o">*=</span> <span class="n">fator_resfriamento</span>  <span class="c1"># Resfriamento</span>
+<a id="__codelineno-2-48" name="__codelineno-2-48" href="#__codelineno-2-48"></a>
+<a id="__codelineno-2-49" name="__codelineno-2-49" href="#__codelineno-2-49"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🏁 Melhor solução encontrada: x = </span><span class="si">{</span><span class="n">estado_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, f(x) = </span><span class="si">{</span><span class="n">valor_atual</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4.</p>
+<hr />
+<h3 id="54-algoritmo-geneticodisruptivo-alternativo-estrategias-de-evolucao-es">5.4. Algoritmo Genético/Disruptivo Alternativo: Estratégias de Evolução (ES)</h3>
+<p>Dentro do campo da computação evolucionária, os Algoritmos Genéticos (GAs) são talvez os mais conhecidos, mas as Estratégias de Evolução (Evolution Strategies - ES), também mencionadas por Russell e Norvig (2013) no contexto de otimização, representam uma linha de desenvolvimento paralela e distinta, particularmente adequada para problemas de otimização em espaços de parâmetros contínuos. Enquanto os GAs clássicos frequentemente operam sobre representações binárias ou discretas (cromossomos) e dão grande ênfase ao operador de cruzamento (recombinação) para gerar novos indivíduos, as ES tipicamente trabalham diretamente com vetores de números reais que representam as soluções candidatas.</p>
+<p>A principal força motriz da evolução nas ES é, muitas vezes, a mutação, e não o cruzamento (embora a recombinação também possa ser usada). A mutação em ES é geralmente implementada adicionando um vetor de ruído gaussiano (normalmente distribuído) ao vetor de parâmetros do indivíduo pai para criar um descendente. Um aspecto sofisticado de muitas ES modernas é a capacidade de adaptar os parâmetros da própria mutação (como as variâncias ou covariâncias da distribuição gaussiana) ao longo do processo evolutivo. Isso permite que o algoritmo ajuste a "força" e a "direção" da mutação dinamicamente, explorando mais amplamente no início e focando em regiões promissoras mais tarde.</p>
+<p>Os mecanismos de seleção nas ES também podem diferir dos GAs. Duas notações comuns são (μ, λ)-ES e (μ + λ)-ES. Na (μ, λ)-ES, μ pais geram λ descendentes (λ ≥ μ), e os μ melhores <em>descendentes</em> formam a população da próxima geração, descartando completamente os pais. Isso permite que a ES escape de ótimos locais mais facilmente. Na (μ + λ)-ES, os μ melhores indivíduos são selecionados a partir da união dos μ pais <em>e</em> dos λ descendentes, garantindo que a melhor solução encontrada até o momento nunca seja perdida (elitismo). A escolha entre essas estratégias depende das características do problema.</p>
+<p>Devido à sua afinidade com espaços contínuos e à adaptação de parâmetros de mutação, as Estratégias de Evolução tornaram-se uma ferramenta poderosa para a otimização de parâmetros em aprendizado de máquina (por exemplo, ajuste de hiperparâmetros ou treinamento direto de redes neurais), robótica, controle e outros domínios onde as soluções são naturalmente representadas por vetores de números reais. Elas oferecem uma alternativa robusta aos GAs quando a representação binária ou o cruzamento tradicional não são os mais adequados.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">random</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="c1"># Função objetivo: queremos minimizar f(x) = x^2</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="k">def</span><span class="w"> </span><span class="nf">funcao_objetivo</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">**</span> <span class="mi">2</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="c1"># Estratégia de mutação: x&#39; = x + N(0, sigma)</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="k">def</span><span class="w"> </span><span class="nf">mutacao</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">sigma</span><span class="p">):</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>    <span class="k">return</span> <span class="n">x</span> <span class="o">+</span> <span class="n">random</span><span class="o">.</span><span class="n">gauss</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="k">def</span><span class="w"> </span><span class="nf">evolution_strategy</span><span class="p">(</span><span class="n">mu</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">lamb</span><span class="o">=</span><span class="mi">40</span><span class="p">,</span> <span class="n">geracoes</span><span class="o">=</span><span class="mi">100</span><span class="p">,</span> <span class="n">sigma_inicial</span><span class="o">=</span><span class="mf">1.0</span><span class="p">):</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>    <span class="c1"># Geração inicial: números reais aleatórios</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>    <span class="n">populacao</span> <span class="o">=</span> <span class="p">[</span><span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">mu</span><span class="p">)]</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>    <span class="n">sigma</span> <span class="o">=</span> <span class="n">sigma_inicial</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>    <span class="k">for</span> <span class="n">geracao</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">geracoes</span><span class="p">):</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        <span class="n">descendentes</span> <span class="o">=</span> <span class="p">[]</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>        <span class="c1"># Cada pai gera λ/mu descendentes</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>        <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">lamb</span><span class="p">):</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>            <span class="n">pai</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">choice</span><span class="p">(</span><span class="n">populacao</span><span class="p">)</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>            <span class="n">filho</span> <span class="o">=</span> <span class="n">mutacao</span><span class="p">(</span><span class="n">pai</span><span class="p">,</span> <span class="n">sigma</span><span class="p">)</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>            <span class="n">descendentes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">filho</span><span class="p">)</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>        <span class="c1"># Combinar pais e descendentes</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>        <span class="n">combinados</span> <span class="o">=</span> <span class="n">populacao</span> <span class="o">+</span> <span class="n">descendentes</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>        <span class="c1"># Selecionar os μ melhores</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>        <span class="n">populacao</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">combinados</span><span class="p">,</span> <span class="n">key</span><span class="o">=</span><span class="n">funcao_objetivo</span><span class="p">)[:</span><span class="n">mu</span><span class="p">]</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>        <span class="c1"># Opcional: adaptar sigma (ex: diminuir ao longo do tempo)</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        <span class="n">sigma</span> <span class="o">*=</span> <span class="mf">0.99</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>        <span class="c1"># Diagnóstico</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>        <span class="n">melhor</span> <span class="o">=</span> <span class="n">populacao</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;🧬 Geração </span><span class="si">{</span><span class="n">geracao</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">: Melhor x = </span><span class="si">{</span><span class="n">melhor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, f(x) = </span><span class="si">{</span><span class="n">funcao_objetivo</span><span class="p">(</span><span class="n">melhor</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, σ = </span><span class="si">{</span><span class="n">sigma</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🏁 Solução final: x = </span><span class="si">{</span><span class="n">melhor</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">, f(x) = </span><span class="si">{</span><span class="n">funcao_objetivo</span><span class="p">(</span><span class="n">melhor</span><span class="p">)</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+</code></pre></div>
+<p><em>Referência:</em> RUSSELL, S. J.; NORVIG, P. <em>Inteligência artificial</em>. 3. ed. Rio de Janeiro: Elsevier Campus, 2013. Capítulo 4 (mencionado brevemente no contexto de otimização estocástica).</p>
+<hr />
+<h2 id="4-conclusao-principais-aprendizados-vantagens-e-limitacoes">4. Conclusão: Principais Aprendizados, Vantagens e Limitações</h2>
+<p>A resolução de problemas por busca é um dos pilares da Inteligência Artificial, fornecendo uma estrutura formal para abordar uma ampla gama de tarefas, desde jogos simples até problemas complexos do mundo real. O conceito central envolve a exploração de um espaço de estados para encontrar uma sequência de ações que leve a um estado objetivo.</p>
+<p><strong>Principais Aprendizados:</strong></p>
+<ul>
+<li><strong>Diversidade de Estratégias:</strong> Aprendemos que existe uma vasta gama de estratégias de busca, cada uma com suas próprias características. As buscas cegas, como a Busca em Largura (BFS), são sistemáticas e podem garantir completude e otimalidade (em certos casos), mas frequentemente sofrem com alta complexidade de tempo e espaço. Por outro lado, as buscas informadas, como A<em>, utilizam heurísticas para guiar a exploração de forma mais eficiente, reduzindo drasticamente o esforço computacional quando a heurística é bem projetada. A A</em> se destaca por sua capacidade de encontrar o caminho de menor custo de forma completa e ótima, desde que sua heurística seja admissível.</li>
+<li><strong>Importância das Heurísticas:</strong> A qualidade da função heurística é crucial para o desempenho das buscas informadas. Uma boa heurística pode transformar um problema intratável em um solucionável, enquanto uma heurística ruim pode levar a um desempenho pior que o da busca cega.</li>
+<li><strong>Busca em Ambientes Complexos:</strong> Para problemas onde o espaço de estados é muito grande ou as soluções ótimas não são estritamente necessárias, algoritmos de busca local como o Hill Climbing oferecem uma alternativa eficiente em termos de memória. Embora possam ficar presos em máximos locais, técnicas como reinício aleatório podem mitigar esse problema. Eles são úteis para otimização contínua.</li>
+<li><strong>Abordagens Evolutivas:</strong> Algoritmos Genéticos representam uma classe de busca estocástica inspirada na evolução natural. Eles são robustos para lidar com espaços de busca complexos, multimodais e ruidosos. Através da manutenção de uma população de soluções e da aplicação de operadores genéticos (seleção, cruzamento, mutação), os AGs podem explorar globalmente o espaço de busca e encontrar soluções de alta qualidade, embora não garantam a otimalidade em tempo finito.</li>
+<li><strong>Trade-offs:</strong> A escolha do algoritmo de busca ideal envolve uma análise cuidadosa dos trade-offs entre completude, otimalidade, complexidade de tempo e complexidade de espaço, além da natureza do problema e da disponibilidade de informações heurísticas.</li>
+</ul>
+<p><strong>Vantagens Gerais da Resolução de Problemas por Busca:</strong></p>
+<ul>
+<li><strong>Generalidade:</strong> A formulação de problemas como busca em um espaço de estados é uma abordagem muito geral, aplicável a diversos domínios.</li>
+<li><strong>Fundamentação Teórica:</strong> Muitos algoritmos de busca possuem uma base teórica sólida que permite analisar seu comportamento e garantias.</li>
+<li><strong>Automatização do Raciocínio:</strong> Permitem que agentes encontrem soluções para problemas sem intervenção humana direta, simulando formas de raciocínio.</li>
+</ul>
+<p><strong>Limitações Gerais da Resolução de Problemas por Busca:</strong></p>
+<ul>
+<li><strong>Explosão Combinatória:</strong> Para muitos problemas, o tamanho do espaço de estados cresce exponencialmente com o tamanho do problema, tornando a busca exaustiva inviável (a "maldição da dimensionalidade").</li>
+<li><strong>Representação do Problema:</strong> A eficácia da busca depende criticamente de como o problema é formulado (definição de estados, ações, custos).</li>
+<li><strong>Necessidade de Heurísticas (para eficiência):</strong> Para problemas complexos, buscas cegas são frequentemente ineficientes, e o desenvolvimento de boas heurísticas pode ser um desafio em si.</li>
+<li><strong>Máximos Locais e Platôs:</strong> Algoritmos de busca local e alguns outros podem ficar presos em soluções subótimas devido à topografia do espaço de busca.</li>
+</ul>
+<p>Em suma, as técnicas de resolução de problemas por busca são ferramentas essenciais no arsenal da Inteligência Artificial. A compreensão de suas diversas formas, vantagens e limitações permite aos desenvolvedores escolher e adaptar a abordagem mais adequada para construir sistemas inteligentes capazes de resolver problemas de forma eficaz e eficiente.</p>
+<h2 id="5-referencias-bibliograficas">5. Referências Bibliográficas</h2>
+<p>LUGER, G. F. <em>Artificial Intelligence: Structures and Strategies for Complex Problem Solving</em>. 6. ed. Boston, MA: Pearson, 2009.</p>
+<p>MARSLAND, S. <em>Machine Learning: An Algorithmic Perspective</em>. 2. ed. Boca Raton, FL: CRC Press, 2014.</p>
+<p>RUSSELL, S. J.; NORVIG, P. <em>Artificial Intelligence: A Modern Approach</em>. 3. ed. Upper Saddle River, NJ: Prentice Hall, 2010.</p>
+<p>SUTTON, R. S.; BARTO, A. G. <em>Reinforcement Learning: An Introduction</em>. 2. ed. Cambridge, MA: MIT Press, 2018.</p>
+<p>DATACAMP. <em>Implementing the Hill Climbing Algorithm for AI in Python</em>. [S.l.]: DataCamp, [s.d.]. Disponível em: https://www.datacamp.com/tutorial/hill-climbing-algorithm-for-ai-in-python. Acesso em: 16 maio 2025.</p>
+<p><strong>Materiais de Aula (Slides da Disciplina):</strong></p>
+<p>FGA0221 – IA - 06. Material de aula da disciplina de Inteligência Artificial. [S.l.: s.n., s.d.].</p>
+<p>FGA0221 – IA - 07. Material de aula da disciplina de Inteligência Artificial. [S.l.: s.n., s.d.].</p>
+<p>FGA0221 – IA - 08. Material de aula da disciplina de Inteligência Artificial. [S.l.: s.n., s.d.].</p>
+<p>FGA0221 – IA - 09. Material de aula da disciplina de Inteligência Artificial. [S.l.: s.n., s.d.].</p>
+<ul>
+<li>Russell, S., &amp; Norvig, P. (2010). <em>Artificial Intelligence: A Modern Approach</em> (3rd ed.). Prentice Hall.</li>
+<li>Material da disciplina FGA0221 – IA - Slides 06.</li>
+<li>Material da disciplina FGA0221 – IA - Slides 07.</li>
+<li>Material da disciplina FGA0221 – IA - Slides 08.</li>
+<li>Material da disciplina FGA0221 – IA - Slides 09.</li>
+<li>Marsland, S. (2014). <em>Machine Learning: An Algorithmic Perspective</em> (2nd ed.). Chapman and Hall/CRC.</li>
+<li>Sutton, R. S., &amp; Barto, A. G. (2018). <em>Reinforcement Learning: An Introduction</em> (2nd ed.). MIT Press.</li>
+<li>Luger, G. F. (2009). <em>Artificial Intelligence: Structures and Strategies for Complex Problem Solving</em> (6th ed.). Pearson.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ananorberto" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8M97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5m282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "content.tooltips", "content.action.edit", "content.action.view", "content.action.download", "content.action.copy", "content.action.print", "content.action.share", "content.action.feedback", "content.action.issue"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>
