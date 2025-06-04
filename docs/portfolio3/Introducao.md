@@ -1,10 +1,7 @@
-Prezado(a) aluno(a),
 
-### **Portfólio 3: Problemas de Satisfação de Restrições (CSPs)**
+#### **Introdução Problemas de Satisfação de Restrições**
 
-#### **1. Introdução: Desvendando os Problemas de Satisfação de Restrições**
-
-No vasto campo da Inteligência Artificial, os **Problemas de Satisfação de Restrições (Constraint Satisfaction Problems - CSPs)** emergem como uma classe fundamental e poderosa de problemas (LUGER, 2008). Sua relevância reside na capacidade de modelar e resolver uma ampla gama de desafios práticos, desde o planejamento de horários e alocação de recursos até a configuração de produtos e o clássico quebra-cabeça de coloração de mapas. A essência dos CSPs reside na identificação de um estado ou conjunto de valores para variáveis que satisfaça um conjunto predefinido de limitações ou restrições.
+No vasto campo da Inteligência Artificial, os **Problemas de Satisfação de Restrições (Constraint Satisfaction Problems - CSPs)** surgem como uma classe fundamental e poderosa de problemas (LUGER, 2008). Sua relevância reside na capacidade de modelar e resolver uma ampla gama de desafios práticos, desde o planejamento de horários e alocação de recursos até a configuração de produtos e o clássico quebra-cabeça de coloração de mapas. A essência dos CSPs reside na identificação de um estado ou conjunto de valores para variáveis que satisfaça um conjunto predefinido de limitações ou restrições.
 
 Uma característica distintiva dos CSPs é a sua estrutura inerente. Ao contrário de abordagens de busca genéricas que exploram um espaço de estados de forma atômica, os algoritmos de CSPs exploram a estrutura das restrições para eliminar grandes porções do espaço de busca de maneira eficiente. Isso é frequentemente alcançado através da **propagação de restrições**, uma técnica que ajusta os possíveis valores de variáveis com base nas restrições existentes e nas atribuições já feitas, garantindo a **consistência local** e podando ramos inviáveis da árvore de busca (RUSSELL; NORVIG, 2010).
 
