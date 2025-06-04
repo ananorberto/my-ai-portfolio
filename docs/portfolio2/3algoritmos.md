@@ -14,6 +14,9 @@ Quando falamos de algoritmos de busca cega (ou não informada), estamos nos refe
 
 A Busca Bidirecional é uma técnica poderosa que executa duas buscas simultâneas - uma partindo do estado inicial e outra do estado objetivo - até que os dois caminhos se encontrem. Esta abordagem pode reduzir significativamente o espaço de busca explorado, especialmente em grafos grandes.
 
+<details>
+<summary>Implementação da Busca Bidirecional</summary>
+
 ```python
 from collections import deque
 
@@ -143,6 +146,7 @@ if __name__ == "__main__":
     else:
         print("Não existe caminho entre os pontos especificados.")
 ```
+</details>
 
 ### 3.2 Algoritmos de Busca Informada (Heurística)
 
@@ -159,6 +163,9 @@ Os algoritmos de busca informada, ou busca heurística, utilizam conhecimento es
 #### 3.2.1 Implementação da Greedy Best-First Search
 
 A Greedy Best-First Search é um algoritmo de busca informada que utiliza apenas a função heurística para guiar a busca, sempre escolhendo expandir o nó que parece estar mais próximo do objetivo. Diferente do A*, ela não considera o custo do caminho já percorrido.
+
+<details>
+<summary>Implementação da Greedy Best-First Search</summary>
 
 ```python
 import heapq
@@ -264,6 +271,7 @@ if __name__ == "__main__":
     else:
         print("Não existe caminho entre os pontos especificados.")
 ```
+</details>
 
 ### 3.3 Algoritmos de Busca em Ambientes Complexos
 
@@ -279,6 +287,9 @@ Ambientes complexos apresentam desafios adicionais em relação à busca clássi
 #### 3.3.1 Implementação da Busca de Feixe Local Estocástica (Stochastic Beam Search)
 
 A Busca de Feixe Local Estocástica é uma variação da busca de feixe local que introduz aleatoriedade na seleção dos sucessores. Em vez de sempre escolher os k melhores sucessores, ela seleciona k sucessores com probabilidade proporcional à sua qualidade, o que ajuda a escapar de máximos locais.
+
+<details>
+<summary>Implementação da Busca de Feixe Local Estocástica</summary>
 
 ```python
 import random
@@ -434,6 +445,7 @@ if __name__ == "__main__":
     
     print(f"Visualização salva como 'stochastic_beam_search_visualization.png'")
 ```
+</details>
 
 ### 3.4 Algoritmos Genéticos e Evolucionários
 
