@@ -1,5 +1,5 @@
 
-#### **Introdução Problemas de Satisfação de Restrições**
+## **Introdução Problemas de Satisfação de Restrições**
 
 No vasto campo da Inteligência Artificial, os **Problemas de Satisfação de Restrições (Constraint Satisfaction Problems - CSPs)** surgem como uma classe fundamental e poderosa de problemas (LUGER, 2008). Sua relevância reside na capacidade de modelar e resolver uma ampla gama de desafios práticos, desde o planejamento de horários e alocação de recursos até a configuração de produtos e o clássico quebra-cabeça de coloração de mapas. A essência dos CSPs reside na identificação de um estado ou conjunto de valores para variáveis que satisfaça um conjunto predefinido de limitações ou restrições.
 
