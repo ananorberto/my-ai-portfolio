@@ -459,6 +459,10 @@ Os Algoritmos Genéticos (AGs) pertencem a uma classe mais ampla de algoritmos e
 
 Os Algoritmos Genéticos são métodos de busca inspirados na seleção natural e na genética. Eles mantêm uma população de soluções candidatas que evoluem ao longo de gerações através de operadores como seleção, cruzamento e mutação.
 
+<details>
+<summary>Implementação de um Algoritmo Genético Simples</summary>
+
+
 ```python
 import random
 import numpy as np
@@ -636,6 +640,7 @@ if __name__ == "__main__":
     print(f"Peso total: {peso_total}/20")
     print(f"Valor total: {valor_total}")
 ```
+</details>
 
 ## Referências Bibliográficas
 
