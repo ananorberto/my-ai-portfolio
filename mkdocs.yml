@@ -124,9 +124,16 @@ nav:
       - Agentes Inteligentes: portfolio1/agentes_inteligentes.md
       - Problemas/Projetos: portfolio1/projetos.md
       - Conclusão: portfolio1/conclusao.md
-#  - Portfólio 2 - Resolvendo problemas por busca:
-#      - Resolvendo problemas por busca: portfolio2/portfolio2.md
-
+  - Portfólio 2 - Resolvendo problemas por busca:
+      - Introdução: portfolio2/Introducao.md
+      - Conceitos: portfolio2/2conceitos.md
+      - Algoritmos: portfolio2/3algoritmos.md
+      - Comparando: portfolio2/comparando.md
+      - Conclusão: portfolio2/conclusao.md
+  - Portfólio 3 - Resolvendo problemas por busca:
+      - Introdução: portfolio3/Introducao.md
+      - Conceitos: portfolio3/conceitos.md
+      - Conclusão: portfolio3/conclusao.md
 
 
 
