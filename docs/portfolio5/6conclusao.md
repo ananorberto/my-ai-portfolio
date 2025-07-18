@@ -55,6 +55,8 @@ As aulas, especificamente os slides 16 a 20 da disciplina FGA0221 – IA, fornec
 
 A combinação da profundidade teórica fornecida por Russell e Norvig com a clareza e exemplos dos materiais de aula foi essencial para construir uma compreensão sólida desses pilares da IA probabilística.
 
+---
+
 ## Referências
 
 *   LUGER, G. F. **Artificial Intelligence: Structures and Strategies for Complex Problem Solving**. 6th ed. Pearson Education, 2008.
@@ -66,3 +68,11 @@ A combinação da profundidade teórica fornecida por Russell e Norvig com a cla
 *   FGA0221 – IA - 20.pdf. **Filtro de Kalman**. [Material de aula].
 *   KALMAN, R. E. A New Approach to Linear Filtering and Prediction Problems. **Transactions of the ASME—Journal of Basic Engineering**, Vol. 82, Serie D, p. 35-45, 1960.
 *   SUTTON, R. S.; BARTO, A. G. **Reinforcement Learning: An Introduction**. 2nd ed. MIT Press, 2014.
+
+---
+
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 16/07/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+

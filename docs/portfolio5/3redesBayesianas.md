@@ -83,7 +83,139 @@ Diversos exemplos e aplicações foram abordados, reforçando a relevância das 
 
 A flexibilidade e o rigor matemático das Redes Bayesianas as tornam uma das ferramentas mais importantes e amplamente utilizadas em IA para lidar com a incerteza, sendo aplicadas em campos como diagnóstico médico, sistemas de recomendação, bioinformática e monitoramento de sistemas complexos [RUSSELL; NORVIG, 2010, p. 70, 74].
 
+## Projeto
+
+### Cenário: Aula Particular de Piano
+
+Para reforçar os conceitos, implementamos um exemplo prático de Rede Bayesiana utilizando a biblioteca pgmpy.
+
+O cenário modelado envolve uma situação didática em que um(a) aluno(a) de piano pode se sentir frustrado(a) ou até desistir das aulas, dependendo de dois fatores principais: se estudou e se a música é complexa.
+
+As variáveis consideradas foram:
+
+* **AlunoSemPratica**: indica se o(a) aluno(a) chegou à aula sem ter praticado.
+* **MusicaComplexa**: indica se a música proposta para a aula é de difícil execução.
+* **Frustracao**: representa o estado emocional do aluno frente à aula.
+* **Desistencia**: variável que indica se o(a) aluno(a) desiste das aulas de piano.
+
+As dependências entre as variáveis seguem uma estrutura de **grafo acíclico dirigido (DAG)**:
+
+```
+AlunoSemPratica   MusicaComplexa
+        \              /
+         \            /
+           -> Frustracao -> Desistencia
+```
+
+### Construção do Modelo
+
+1. **Definição da estrutura (DAG)**:
+
+   * AlunoSemPratica e MusicaComplexa influenciam Frustracao.
+   * Frustracao influencia Desistencia.
+
+2. **Tabelas de Probabilidade Condicional (CPDs)**:
+
+   * São definidas para todas as variáveis, considerando as dependências.
+   * Exemplo: \$P(\text{Frustracao} \mid \text{AlunoSemPratica}, \text{MusicaComplexa})\$ quantifica a chance de frustração dependendo das outras duas variáveis.
+
+3. **Verificação e Inferência**:
+
+   * O modelo é verificado quanto à sua consistência com `.check_model()`.
+   * Utiliza-se o algoritmo de **Eliminação de Variáveis** para responder perguntas probabilísticas, como:
+
+     * Qual a probabilidade de desistência se o aluno não praticou e a música é complexa?
+     * Qual a chance de frustração se o aluno praticou e a música é simples?
+     * Qual a probabilidade de desistência mesmo sem frustração?
+
+### Código Python
+
+```python
+#import pandas as pd
+from pgmpy.models import DiscreteBayesianNetwork
+from pgmpy.factors.discrete import TabularCPD
+from pgmpy.inference import VariableElimination
+
+# 1. Definindo a estrutura da rede - Contexto: Aula Particular de Piano
+# As arestas representam as dependências: (causa, efeito)
+model = DiscreteBayesianNetwork([
+    ('AlunoSemPratica', 'Frustracao'),
+    ('MusicaComplexa', 'Frustracao'),
+    ('Frustracao', 'Desistencia')
+])
+
+# 2. Definindo as Tabelas de Probabilidade Condicional (CPDs)
+# AlunoSemPratica: P(ASP) - Probabilidade do aluno não ter praticado
+cpd_aluno_sem_pratica = TabularCPD(variable='AlunoSemPratica', variable_card=2, values=[[0.3], [0.7]])
+# Card = 2 significa que a variável tem 2 estados (True/False ou 0/1)
+# Values = [[P(AlunoSemPratica=True)], [P(AlunoSemPratica=False)]]
+
+# MusicaComplexa: P(MC) - Probabilidade da música ser complexa
+cpd_musica_complexa = TabularCPD(variable='MusicaComplexa', variable_card=2, values=[[0.4], [0.6]])
+
+# Frustracao: P(F | ASP, MC) - Probabilidade de frustração dadas as condições
+# A ordem dos valores segue: (ASP=T, MC=T), (ASP=T, MC=F), (ASP=F, MC=T), (ASP=F, MC=F)
+cpd_frustracao = TabularCPD(variable='Frustracao', variable_card=2,
+                           values=[[0.85, 0.6, 0.5, 0.1],   # P(Frustracao=True | ASP, MC)
+                                   [0.15, 0.4, 0.5, 0.9]],  # P(Frustracao=False | ASP, MC)
+                           evidence=['AlunoSemPratica', 'MusicaComplexa'],
+                           evidence_card=[2, 2])
+
+# Desistencia: P(D | F) - Probabilidade de desistir dada a frustração
+cpd_desistencia = TabularCPD(variable='Desistencia', variable_card=2,
+                            values=[[0.7, 0.05],   # P(Desistencia=True | F)
+                                    [0.3, 0.95]],  # P(Desistencia=False | F)
+                            evidence=['Frustracao'],
+                            evidence_card=[2])
+
+# 3. Adicionando as CPDs ao modelo
+model.add_cpds(cpd_aluno_sem_pratica, cpd_musica_complexa, cpd_frustracao, cpd_desistencia)
+
+# 4. Verificando a consistência do modelo
+# É sempre bom verificar se as CPDs foram adicionadas corretamente e se o modelo é válido.
+print("Modelo válido?", model.check_model())
+
+# 5. Realizando Inferência
+# Agora, a parte divertida! Vamos fazer perguntas ao nosso modelo.
+# Criamos um objeto de inferência a partir do nosso modelo.
+infer = VariableElimination(model)
+
+# Pergunta 1: Qual a probabilidade de Desistência se o Aluno não praticou e a Música é Complexa?
+# P(Desistencia | AlunoSemPratica=True, MusicaComplexa=True)
+print("\n--- Inferência 1 ---")
+prob_desistencia_aluno_musica = infer.query(variables=['Desistencia'],
+                                           evidence={'AlunoSemPratica': 0, 'MusicaComplexa': 0})
+# 0 geralmente representa True, 1 representa False na pgmpy por padrão, mas pode variar.
+# É importante verificar a ordem dos estados definidos na CPD.
+# No nosso caso, 0 é True e 1 é False para todas as variáveis.
+print(prob_desistencia_aluno_musica)
+
+# Pergunta 2: Qual a probabilidade de Frustração se o Aluno praticou e a Música é Simples?
+# P(Frustracao | AlunoSemPratica=False, MusicaComplexa=False)
+print("\n--- Inferência 2 ---")
+prob_frustracao_aluno_preparado = infer.query(variables=['Frustracao'],
+                                             evidence={'AlunoSemPratica': 1, 'MusicaComplexa': 1})
+print(prob_frustracao_aluno_preparado)
+
+# Pergunta 3: Qual a probabilidade de Desistência se não há Frustração?
+# P(Desistencia | Frustracao=False)
+print("\n--- Inferência 3 ---")
+prob_desistencia_sem_frustracao = infer.query(variables=['Desistencia'],
+                                             evidence={'Frustracao': 1})
+print(prob_desistencia_sem_frustracao)
+```
+
+### Resultado
+
+![Resultado da execução do código da Rede Bayesiana](./output_rb.png)
+
+### Considerações Finais
+
+Esse projeto exemplifica o poder das Redes Bayesianas para modelar situações do mundo real que envolvem incerteza, permitindo decisões informadas a partir de evidências parciais. Ele também evidencia a escalabilidade do modelo: novos fatores poderiam ser adicionados ao DAG (como motivação, feedback dos pais etc.), sem reconstruir todo o sistema, o que é  uma característica crucial para agentes de IA operando em domínios complexos e dinâmicos.
+
+
 ---
+
 **Referências**
 
 LUGER, George F. **Artificial Intelligence**: Structures and Strategies for Complex Problem Solving. 6. ed. Boston: Pearson Education, 2009.
@@ -103,3 +235,14 @@ FGA0221 – IA - 19. **Raciocínio probabilístico ao longo do tempo – Parte 2
 FGA0221 – IA - 20. **Filtro de Kalman: Algoritmo**. Material de aula. [S. l.: s. n.], [entre 2023 e 2025].
 
 BEST, Kalman filter Expanation. [S. l.: s. n.], [entre 2023 e 2025]. (BEST, Kalman filter Expanation.pdf)
+```
+
+
+
+---
+
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 16/07/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+

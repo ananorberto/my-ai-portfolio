@@ -1,4 +1,4 @@
-## 4. Raciocínio Probabilístico ao Longo do Tempo
+# 4. Raciocínio probabilístico ao longo do tempo
 
 Este portfólio explora o raciocínio probabilístico ao longo do tempo, um conceito fundamental na Inteligência Artificial (IA) para lidar com ambientes dinâmicos e incertos. Abordaremos a evolução dos estados, a introdução de modelos como os Modelos Ocultos de Markov (HMMs), as principais tarefas de inferência temporal e suas vastas aplicações, utilizando como base o material de Russell e Norvig (2010), os slides da aula 19, e exemplos práticos.
 
@@ -72,6 +72,141 @@ A compreensão dos conceitos de raciocínio probabilístico ao longo do tempo é
 *   **Exemplo do Sorvete (IceCream.py):** Embora o arquivo `IceCream.py` não tenha sido fornecido nos materiais, o exemplo do sorvete (Jason Eisner, 2002) é um HMM didático que relaciona o número de sorvetes com a temperatura oculta (quente ou fria). Este exemplo, presente em materiais complementares como Jurafsky e Martin (2021), reforça a ideia de inferência sobre estados ocultos a partir de observações.
 *   **Vídeos das Aulas:** Os slides da aula 19 recomendam vídeos como "Hidden Markov Model Clearly Explained!" e "Hidden Markov Model in Python", que são recursos valiosos para a visualização e implementação prática dos algoritmos de HMMs, consolidando o entendimento da teoria com a prática.
 
+
+## Projeto
+
+### Cenário: Clima Oculto e Atividades Observadas
+
+Nesta seção, estudo como agentes inteligentes podem lidar com a incerteza que muda com o tempo, utilizando modelos probabilísticos dinâmicos. Com base nos capítulos 15 e 16 do livro do Russell e Norvig (2010), vídeos explicativos e os slides da aula 19, explorei conceitos como Processos de Markov, Modelos Ocultos de Markov (HMMs) e as principais tarefas de inferência temporal: filtragem, predição, suavização e explicação.
+
+O objetivo foi entender como agentes podem atualizar suas crenças ao longo do tempo, mesmo quando não têm acesso direto ao estado real do mundo. Isso é especialmente importante em ambientes parcialmente observáveis, como no caso de um robô que tenta se localizar em um mapa apenas com sensores barulhentos, ou em diagnósticos médicos com sintomas ambíguos.
+
+Além da parte teórica, apliquei os conceitos em um exemplo prático usando a biblioteca hmmlearn em Python, onde implementei um HMM simples, com definição de estados ocultos e observações, e usei o algoritmo de Viterbi para descobrir a sequência mais provável de estados escondidos. Essa implementação ajudou a consolidar os conceitos vistos nos materiais e mostrou como esses modelos podem ser aplicados em problemas reais.
+
+
+### Construção do Modelo
+
+* **Estados Ocultos**:
+
+  * `0 = Ensolarado`
+  * `1 = Chuvoso`
+
+* **Observações**:
+
+  * `0 = Caminhar`
+  * `1 = Fazer Compras`
+  * `2 = Limpar Casa`
+
+* **Probabilidades**:
+
+  * **Inicial**:
+    P(Ensolarado) = 0.6, P(Chuvoso) = 0.4
+  * **Transição entre Estados**:
+
+    * De Ensolarado → Ensolarado: 0.7
+    * De Ensolarado → Chuvoso: 0.3
+    * De Chuvoso → Ensolarado: 0.4
+    * De Chuvoso → Chuvoso: 0.6
+  * **Emissão (atividade observada dado o clima)**:
+
+    * Ensolarado → \[Caminhar: 0.1, Fazer Compras: 0.4, Limpar Casa: 0.5]
+    * Chuvoso → \[Caminhar: 0.6, Fazer Compras: 0.3, Limpar Casa: 0.1]
+
+* **Observações registradas durante 7 dias**:
+
+  * Caminhar, Fazer Compras, Limpar Casa, Caminhar, Fazer Compras, Caminhar, Limpar Casa
+
+
+### Código Python
+
+
+```python
+
+import numpy as np
+from hmmlearn import hmm
+
+# 1. Definindo os parâmetros do HMM
+
+# Estados ocultos: 0 = Ensolarado, 1 = Chuvoso
+# Observações: 0 = Caminhar, 1 = Fazer Compras, 2 = Limpar Casa
+
+# Probabilidades Iniciais (start_probability):
+# P(Ensolarado no dia 1), P(Chuvoso no dia 1)
+start_probability = np.array([0.6, 0.4])
+
+# Probabilidades de Transição (transition_probability):
+# P(Estado_t+1 | Estado_t)
+# Linhas: Estado_t (Ensolarado, Chuvoso)
+# Colunas: Estado_t+1 (Ensolarado, Chuvoso)
+# Ex: P(Ensolarado | Ensolarado) = 0.7, P(Chuvoso | Ensolarado) = 0.3
+# Ex: P(Ensolarado | Chuvoso) = 0.4, P(Chuvoso | Chuvoso) = 0.6
+transition_probability = np.array([
+    [0.7, 0.3],
+    [0.4, 0.6]
+])
+
+# Probabilidades de Emissão (emission_probability):
+# P(Observação | Estado Oculto)
+# Linhas: Estado Oculto (Ensolarado, Chuvoso)
+# Colunas: Observação (Caminhar, Fazer Compras, Limpar Casa)
+# Ex: P(Caminhar | Ensolarado) = 0.1, P(Fazer Compras | Ensolarado) = 0.4, P(Limpar Casa | Ensolarado) = 0.5
+# Ex: P(Caminhar | Chuvoso) = 0.6, P(Fazer Compras | Chuvoso) = 0.3, P(Limpar Casa | Chuvoso) = 0.1
+emission_probability = np.array([
+    [0.1, 0.4, 0.5],
+    [0.6, 0.3, 0.1]
+])
+
+# 2. Criando o Modelo HMM
+# n_components é o número de estados ocultos
+model = hmm.CategoricalHMM(n_components=2, tol=1e-2, n_iter=100)
+model.startprob_ = start_probability
+model.transmat_ = transition_probability
+model.emissionprob_ = emission_probability
+
+# 3. Sequência de Observações
+# Vamos supor que observamos as seguintes atividades ao longo de 7 dias:
+# Dia 1: Caminhar (0)
+# Dia 2: Fazer Compras (1)
+# Dia 3: Limpar Casa (2)
+# Dia 4: Caminhar (0)
+# Dia 5: Fazer Compras (1)
+# Dia 6: Caminhar (0)
+# Dia 7: Limpar Casa (2)
+
+# A sequência de observações deve ser um array 2D, onde cada observação é uma lista de um elemento.
+observations = np.array([[0], [1], [2], [0], [1], [0], [2]])
+
+# 4. Inferência: Descodificando a sequência de estados      ocultos (Algoritmo de Viterbi)
+# O algoritmo de Viterbi nos dá a sequência mais provável de estados ocultos
+# que gerou a sequência de observações.
+logprob, hidden_states = model.decode(observations, algorithm="viterbi")
+
+print("Log-probabilidade da sequência de observações:", logprob)
+print("Sequência mais provável de estados ocultos (0=Ensolarado, 1=Chuvoso):")
+print(hidden_states)
+
+# Vamos mapear os estados para algo mais legível
+state_map = {0: "Ensolarado", 1: "Chuvoso"}
+observed_map = {0: "Caminhar", 1: "Fazer Compras", 2: "Limpar Casa"}
+
+print("\n--- Detalhes da Inferência ---")
+for i, obs_idx in enumerate(observations.flatten()):
+    print(f"Dia {i+1}: Observação = {observed_map[obs_idx]}, Clima Inferido = {state_map[hidden_states[i]]}")
+
+```
+
+### Resultado 
+
+![Resultado da execução do código](./output_2.png)
+
+---
+
+### Considerações Finais
+
+O projeto demonstrou como modelos ocultos de Markov podem ser usados para lidar com incerteza ao longo do tempo. Através do algoritmo de Viterbi, foi possível estimar estados ocultos com base em observações, mostrando a utilidade prática desse tipo de raciocínio probabilístico.
+
+---
+
 ### Referências
 
 *   Russell, S., & Norvig, P. (2010). *Artificial Intelligence - A Modern Approach* (3rd ed.). Prentice Hall. (Observação: As citações no texto referem-se à 3ª edição, que o usuário especificou como "Russell e Norvig (2010)", embora algumas menções nos materiais originais possam referir-se a edições anteriores).
@@ -87,3 +222,11 @@ A compreensão dos conceitos de raciocínio probabilístico ao longo do tempo é
 *   Alpaydin, E. (2014). *Machine Learning - An Algorithmic Perspective* (2nd ed.). Springer. (Disponível em formato PDF como "Machine Learning - An Algorithmic Perspective 2nd edition 2014.pdf").
 *   Sutton, R. S., & Barto, A. G. (2015). *Reinforcement Learning: An Introduction* (2nd ed.). A Bradford Book, The MIT Press. (Disponível em formato PDF como "Reinforcement-Learning:_An_Introduction.pdf").
 *   Luger, G. F. (2008). *Artificial intelligence: Structures and strategies for complex problem solving* (6th ed.). Pearson Education. (Disponível em formato PDF como "artificial intelligence structures and strategies for complex problem solving.pdf").
+
+---
+
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 16/07/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+

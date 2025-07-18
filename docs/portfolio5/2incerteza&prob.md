@@ -1,12 +1,12 @@
 # 2. Incerteza e Probabilidade
 
-No fascinante campo da Inteligência Artificial (IA), um dos maiores desafios é construir agentes que operem de forma eficaz em ambientes que são, por natureza, imprevisíveis e complexos. A realidade é que o mundo raramente é tão organizado e determinístico quanto gostaríamos. É aqui que entra a **incerteza**, um elemento fundamental que os agentes de IA precisam aprender a quantificar e gerenciar.
+Na Inteligência Artificial (IA), um dos maiores desafios é construir agentes que operem de forma eficaz em ambientes que são, por natureza, imprevisíveis e complexos. A realidade é que o mundo raramente é tão organizado e determinístico quanto gostaríamos. É aqui que entra a **incerteza**, um elemento fundamental que os agentes de IA precisam aprender a quantificar e gerenciar.
 
 ### Por que a IA precisa lidar com incerteza?
 
 Como vimos nas aulas e como Russell e Norvig (2010, p. 54) destacam, **"agentes podem precisar lidar com incerteza, seja devido a observabilidade parcial, não determinismo ou uma combinação dos dois"**. Imagine um robô explorando um ambiente desconhecido: seus sensores podem falhar ou fornecer dados imprecisos (observabilidade parcial), e suas ações podem não ter resultados garantidos (não determinismo). Por exemplo, um sistema de navegação autônoma em um carro não pode ter certeza absoluta de que um pedestre parado continuará parado ou que um semáforo verde permanecerá verde tempo suficiente.
 
-Essa incerteza não é apenas um "problema técnico"; é uma característica intrínseca do mundo real. Ela surge da nossa "preguiça" em especificar cada detalhe do universo e da nossa "ignorância" sobre todas as condições que afetam um resultado (RUSSELL; NORVIG, 2010, p. 72). Além disso, **"sistemas de raciocínio e planejamento devem ser capazes de lidar com a incerteza"**, pois as informações sensoriais raramente são perfeitamente confiáveis (RUSSELL; NORVIG, 2010, p. 17). A busca por uma racionalidade perfeita, que exigiria modelar cada minúcia do mundo e calcular todas as consequências, é muitas vezes computacionalmente inviável.
+Essa incerteza não é apenas um "problema técnico"; é uma característica intrínseca do mundo real. Ela surge da nossa "preguiça" em especificar cada detalhe do universo e da nossa "ignorância" sobre todas as condições que afetam um resultado (RUSSELL; NORVIG, 2010, p. 72). Além disso, **"sistemas de raciocínio e planejamento devem ser capazes de lidar com a incerteza"**, pois as informações sensoriais raramente são perfeitamente confiáveis (RUSSELL; NORVIG, 2010). A busca por uma racionalidade perfeita, que exigiria modelar cada minúcia do mundo e calcular todas as consequências, é muitas vezes computacionalmente inviável.
 
 ### A transição dos agentes lógicos para agentes que tomam decisões com base em graus de crença
 
@@ -64,3 +64,11 @@ RUSSELL, Stuart J.; NORVIG, Peter. **Artificial Intelligence**: A Modern Approac
 LUGER, George F. **Artificial Intelligence**: Structures and Strategies for Complex Problem Solving. 6. ed. Boston: Pearson Education, 2009.
 
 Erzbischof, CC BY-SA 3.0 <https://creativecommons.org/licenses/by-sa/3.0>, via Wikimedia Commons
+
+---
+
+
+| Versão | Data       | Modificação         | Nome                 | GitHub                                      |
+|--------|------------|---------------------|----------------------|---------------------------------------------|
+| `1.0`  | 16/07/2025 | Criação do documento | Ana Beatriz Norberto | [@ananorberto](https://github.com/ananorberto) |
+
