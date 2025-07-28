@@ -1,0 +1,1591 @@
+
+<!doctype html>
+<html lang="pt" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Portfólio de Inteligência Artificial">
+      
+      
+        <meta name="author" content="Ana Beatriz Norberto">
+      
+      
+        <link rel="canonical" href="https://ananorberto.github.io/portfolio-ia/portfolio5/3redesBayesianas/">
+      
+      
+        <link rel="prev" href="../2incerteza%26prob/">
+      
+      
+        <link rel="next" href="../4raciocinioProb/">
+      
+      
+      <link rel="icon" href="../../assets/logo_robot.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.16">
+    
+    
+      
+        <title>Redes Bayesianas - Portfólio de IA</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.7e37652d.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i%7CIBM+Plex+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Raleway";--md-code-font:"IBM Plex Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-redes-bayesianas" class="md-skip">
+          Pular para conteúdo
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabeçalho">
+    <a href="../.." title="Portfólio de IA" class="md-header__button md-logo" aria-label="Portfólio de IA" data-md-component="logo">
+      
+  <img src="../../assets/logo_robot.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Portfólio de IA
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Redes Bayesianas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Mudar para modo escuro"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo escuro" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple"  aria-label="Mudar para modo claro"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Mudar para modo claro" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Selecione o idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="/" hreflang="pt-BR" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="/en/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Buscar" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Pesquisar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpar" aria-label="Limpar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando busca
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Abas" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Início
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio1/introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 1 – Introdução
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio2/Introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 2 - Problemas por busca
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio3/Introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 3 - (CSPs)
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio4/1introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 4 - Agentes Lógicos
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../1introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 5
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../portfolio6/1introducao/" class="md-tabs__link">
+          
+  
+  
+    
+  
+  Portfólio 6
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navegação" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Portfólio de IA" class="md-nav__button md-logo" aria-label="Portfólio de IA" data-md-component="logo">
+      
+  <img src="../../assets/logo_robot.png" alt="logo">
+
+    </a>
+    Portfólio de IA
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Início
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio1/introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 1 – Introdução
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio2/Introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 2 - Problemas por busca
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio3/Introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 3 - (CSPs)
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio4/1introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 4 - Agentes Lógicos
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+      
+        
+      
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 5
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Portfólio 5
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1introducao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Introdução
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../2incerteza%26prob/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Incerteza e Probabilidade
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Redes Bayesianas
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Redes Bayesianas
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-e-motivacao-para-o-uso-de-redes-bayesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição e Motivação para o Uso de Redes Bayesianas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceitos-centrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceitos Centrais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construcao-e-inferencia-em-redes-bayesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construção e Inferência em Redes Bayesianas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-regra-de-bayes-como-base-para-raciocinio-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Regra de Bayes como Base para Raciocínio Diagnóstico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacao-com-logica-proposicional-em-termos-de-escalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparação com Lógica Proposicional em Termos de Escalabilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-discutidos-em-aula-e-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos Discutidos em Aula e Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-aula-particular-de-piano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário: Aula Particular de Piano
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construcao-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construção do Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideracoes-finais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações Finais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../4raciocinioProb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Raciocínio Probabilístico ao Longo do Tempo
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../5filtroKalman/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Filtro de Kalman
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../6conclusao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Conclusão
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+      
+        
+      
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+  
+    <a href="../../portfolio6/1introducao/" class="md-nav__link">
+      
+  
+  
+  <span class="md-ellipsis">
+    Portfólio 6
+    
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Índice">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Índice
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#definicao-e-motivacao-para-o-uso-de-redes-bayesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Definição e Motivação para o Uso de Redes Bayesianas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conceitos-centrais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conceitos Centrais
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#construcao-e-inferencia-em-redes-bayesianas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construção e Inferência em Redes Bayesianas
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-regra-de-bayes-como-base-para-raciocinio-diagnostico" class="md-nav__link">
+    <span class="md-ellipsis">
+      A Regra de Bayes como Base para Raciocínio Diagnóstico
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#comparacao-com-logica-proposicional-em-termos-de-escalabilidade" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comparação com Lógica Proposicional em Termos de Escalabilidade
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exemplos-discutidos-em-aula-e-referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplos Discutidos em Aula e Referências
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#projeto" class="md-nav__link">
+    <span class="md-ellipsis">
+      Projeto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Projeto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cenario-aula-particular-de-piano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cenário: Aula Particular de Piano
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#construcao-do-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      Construção do Modelo
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código Python
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      Resultado
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#consideracoes-finais" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considerações Finais
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-redes-bayesianas">3. Redes Bayesianas</h1>
+<p>Em Inteligência Artificial (IA), a capacidade de lidar com a incerteza é crucial para que os agentes possam operar de forma eficaz em ambientes complexos e imprevisíveis. Embora os agentes lógicos baseados em verdades absolutas tenham seu lugar, a realidade do mundo exige uma abordagem que permita expressar graus de crença e tomar decisões racionais mesmo com informações incompletas [RUSSELL; NORVIG, 2010, p. 56]. É neste cenário que as <strong>Redes Bayesianas</strong> emergem como uma ferramenta poderosa e eficiente.</p>
+<h3 id="definicao-e-motivacao-para-o-uso-de-redes-bayesianas">Definição e Motivação para o Uso de Redes Bayesianas</h3>
+<p>As Redes Bayesianas, também conhecidas como <strong>redes de crença Bayesianas</strong> (Bayesian belief networks - BBNs) [LUGER, 2009, p. 390], são modelos gráficos que representam as relações probabilísticas entre um conjunto de variáveis. <strong>Russell e Norvig (2010, p. 55)</strong> explicam que elas fornecem uma <strong>"maneira sistemática de representar essas relações explicitamente na forma de redes Bayesianas"</strong> para capturar o conhecimento incerto de forma natural e eficiente [RUSSELL; NORVIG, 2010, p. 55].</p>
+<p>A motivação para o uso de redes Bayesianas deriva das limitações das abordagens anteriores:</p>
+<ul>
+<li><strong>Incerteza Inerente ao Mundo Real</strong>: Agentes de IA frequentemente precisam lidar com informações incompletas ou ruidosas, seja por observabilidade parcial do ambiente ou por um comportamento não determinístico de suas ações [RUSSELL; NORVIG, 2010, p. 54]. A lógica proposicional e de primeira ordem, que opera com certezas (verdadeiro/falso), é insuficiente para modelar esses graus de incerteza [LUGER, 2009, p. 292].</li>
+<li><strong>Transição de Agentes Lógicos para Probabilísticos</strong>: Enquanto um agente lógico mantém um estado de crença baseado em verdades absolutas, o que pode levar ao "problema da qualificação" (onde é impossível listar todas as exceções a uma regra), um <strong>"agente probabilístico pode ter um grau numérico de crença entre 0 (para sentenças que são certamente falsas) e 1 (certamente verdadeiras)"</strong> [RUSSELL; NORVIG, 2010, p. 56]. As Redes Bayesianas fornecem a estrutura para representar e raciocinar com esses graus de crença.</li>
+<li><strong>Complexidade da Distribuição Conjunta Completa</strong>: Representar o conhecimento incerto através de uma distribuição conjunta completa de todas as variáveis do domínio se torna inviável para problemas realistas, pois a tabela resultante teria um tamanho exponencial em relação ao número de variáveis [LUGER, 2009, p. 347]. <strong>Russell e Norvig (2010, p. 55)</strong> apontam que as redes Bayesianas foram inventadas para permitir a "representação eficiente e o raciocínio rigoroso com conhecimento incerto". Elas "superam muitos problemas dos sistemas de raciocínio probabilístico das décadas de 1960 e 1970" [RUSSELL; NORVIG, 2010, p. 19].</li>
+</ul>
+<h3 id="conceitos-centrais">Conceitos Centrais</h3>
+<p>As Redes Bayesianas são fundamentadas em três conceitos centrais que lhes conferem poder e eficiência:</p>
+<ul>
+<li><strong>Estrutura de Grafo Acíclico Dirigido (DAG - Directed Acyclic Graph)</strong>:<ul>
+<li><strong>Uma rede Bayesiana é um grafo direcionado no qual cada nó carrega informações de probabilidade</strong>.</li>
+<li><strong>Cada nó corresponde a uma variável aleatória</strong>, que pode ser discreta ou contínua.</li>
+<li><strong>Ligações por setas conectam pares de nós</strong>, indicando relações de "genitor-filho" (causa-efeito).</li>
+<li>Crucialmente, <strong>o grafo não tem ciclos direcionados e, portanto, é um grafo acíclico dirigido</strong>. Essa propriedade garante que não há dependências circulares e que a rede define uma distribuição de probabilidade consistente e única. <strong>Luger (2009, p. 391)</strong> enfatiza que "influências causais são direcionadas" e "o raciocínio de influência causal não é circular".</li>
+</ul>
+</li>
+</ul>
+<p align="center">
+  <a title="AnAj, Public domain, via Wikimedia Commons" href="https://commons.wikimedia.org/wiki/File:SimpleBayesNet.svg">
+    <img width="512" alt="SimpleBayesNet" src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0e/SimpleBayesNet.svg/512px-SimpleBayesNet.svg.png?20150926224545">
+  </a><br>
+  <em>Figura 2: Exemplo de Rede Bayesiana simples.</em>
+</p>
+
+<p>Nesta figura 2 , cada nó representa uma variável aleatória, e as setas indicam dependência condicional entre elas. Essa estrutura permite fatorar a distribuição conjunta e realizar inferência probabilística eficiente.</p>
+<ul>
+<li><strong>Independência Condicional</strong>:<ul>
+<li>Este é o pilar da eficiência das Redes Bayesianas. <strong>"Cada nó é condicionalmente independente de seus não descendentes, dados seus genitores"</strong>.</li>
+<li><strong>Russell e Norvig (2010, p. 55)</strong> ressaltam a importância da "independência e relacionamentos de independência condicional" para simplificar as representações probabilísticas. Nos slides, o exemplo de MaryCalls e JohnCalls ilustra que, dado o estado do alarme, a chamada de John não influencia a chamada de Mary, mesmo que ambos sejam influenciados indiretamente por roubos ou terremotos.</li>
+<li>Essa propriedade permite que a probabilidade de um nó dependa apenas de seus genitores diretos, e não de todas as outras variáveis na rede, o que reduz drasticamente o número de parâmetros necessários para representar a distribuição conjunta.</li>
+</ul>
+</li>
+<li><strong>Fatoração da Distribuição Conjunta</strong>:<ul>
+<li>A semântica de uma Rede Bayesiana é definida pela forma como ela representa uma distribuição conjunta específica sobre todas as variáveis.</li>
+<li><strong>As redes Bayes definem cada entrada na distribuição conjunta da seguinte forma:</strong> $P(X_1, ..., X_n) = \prod_{i=1}^{n} P(X_i | Parents(X_i))$. Esta é uma fatoração compacta da distribuição conjunta.</li>
+<li>Como demonstrado na aula 16 e por <strong>Russell e Norvig (2010, p. 58)</strong>, essa fatoração é uma aplicação da regra da cadeia da probabilidade, onde a independência condicional permite que cada termo $P(X_i | X_{i-1}, ..., X_1)$ seja simplificado para $P(X_i | Parents(X_i))$, desde que os nós sejam ordenados de forma consistente com a estrutura do grafo.</li>
+</ul>
+</li>
+</ul>
+<h3 id="construcao-e-inferencia-em-redes-bayesianas">Construção e Inferência em Redes Bayesianas</h3>
+<p>A construção de uma Rede Bayesiana segue um processo sistemático que aproveita a estrutura de dependências causais:</p>
+<ul>
+<li>
+<p><strong>Construção da Rede</strong>:</p>
+<ol>
+<li><strong>Nós</strong>: Primeiro, determine o conjunto de variáveis aleatórias necessárias para modelar o domínio. A ordem dessas variáveis ($X_1, ..., X_n$) é importante; uma ordem em que as causas precedem os efeitos geralmente resulta em uma rede mais compacta e esparsa.</li>
+<li><strong>Ligações</strong>: Para cada variável $X_i$ (de $i=1$ a $n$), escolha um conjunto mínimo de genitores de $X_1, ..., X_{i-1}$ que a influenciam diretamente. Para cada genitor selecionado, insira uma ligação direcionada para $X_i$. Esse passo garante a propriedade de independência condicional.</li>
+<li><strong>CPTs (Tabelas de Probabilidade Condicional)</strong>: Para cada nó $X_i$, escreva a tabela de probabilidade condicional $P(X_i | Parents(X_i))$. Essas tabelas quantificam o efeito dos genitores no nó com um número finito de parâmetros.
+Este método de construção garante que a rede é acíclica e minimiza redundâncias, assegurando a consistência.</li>
+</ol>
+</li>
+<li>
+<p><strong>Inferência na Rede</strong>:</p>
+<ul>
+<li>A tarefa primária da inferência probabilística é calcular a distribuição de probabilidade a posteriori para um conjunto de variáveis de consulta, dada alguma evidência observada. Por exemplo, no cenário do alarme, podemos perguntar a probabilidade de um roubo dado que John ligou e Mary ligou, ou seja, $P(\text{Roubo} | \text{JohnLigou}, \text{MaryLigou})$.</li>
+<li><strong>Inferência por Enumeração</strong>: A aula 17 e <strong>Russell e Norvig (2010, p. 522)</strong> explicam que qualquer probabilidade condicional pode ser calculada somando-se os termos da distribuição conjunta completa. Uma vez que a Rede Bayesiana fornece uma representação fatorada da distribuição conjunta, uma consulta pode ser respondida calculando-se somas de produtos de probabilidades condicionais da rede.</li>
+<li><strong>Complexidade e Eficiência</strong>: Embora a inferência por enumeração seja conceitualmente simples, ela pode ser computacionalmente cara para redes grandes. Para redes complexas, como uma rede de seguro de carro com 27 variáveis, a inferência exata pode exigir milhões de operações. A chave para uma inferência eficiente é evitar cálculos repetidos.</li>
+<li><strong>Inferência Aproximada</strong>: Para lidar com a intratabilidade da inferência exata em grandes redes, são utilizados métodos de inferência aproximada, como os <strong>algoritmos de Monte Carlo</strong>. Esses métodos geram eventos aleatórios baseados nas probabilidades da rede e, com amostras suficientes, podem se aproximar arbitrariamente da verdadeira distribuição de probabilidade. Os slides da aula 17 mencionam a amostragem direta e a Cadeia de Markov Monte Carlo (MCMC) como exemplos.</li>
+</ul>
+</li>
+</ul>
+<h3 id="a-regra-de-bayes-como-base-para-raciocinio-diagnostico">A Regra de Bayes como Base para Raciocínio Diagnóstico</h3>
+<p>A <strong>Regra de Bayes</strong> é fundamental para o raciocínio diagnóstico e para o funcionamento das Redes Bayesianas. Como afirmam <strong>Russell e Norvig (2010, p. 496)</strong>, a equação $P(b | a) = P(a | b)P(b) / P(a)$ (ou suas formas mais gerais) <strong>"subjaz a maioria dos sistemas modernos de IA para inferência probabilística"</strong>.</p>
+<p>Em contextos de diagnóstico, frequentemente temos informações causais (qual a probabilidade de um sintoma dado uma doença, $P(\text{sintoma} | \text{doença})$) e desejamos inferir a causa (qual a probabilidade de uma doença dado um sintoma, $P(\text{doença} | \text{sintoma})$). A Regra de Bayes permite essa inversão de probabilidades, tornando-a essencial para sistemas de diagnóstico, como os aplicados em medicina ou para identificar falhas em sistemas [LUGER, 2009, p. 338].</p>
+<p>A rede bayesiana apresentada nos slides ilustra o problema do alarme, onde o objetivo é diagnosticar um roubo ou terremoto dadas as chamadas de John e Mary. Calcular $P(\text{Roubo} | \text{JohnLigou}, \text{MaryLigou})$ é um exemplo clássico de raciocínio diagnóstico que utiliza os princípios da Regra de Bayes sobre a estrutura da rede para inferir as causas a partir dos efeitos observados.</p>
+<h3 id="comparacao-com-logica-proposicional-em-termos-de-escalabilidade">Comparação com Lógica Proposicional em Termos de Escalabilidade</h3>
+<p>A principal vantagem das Redes Bayesianas sobre a lógica proposicional (e mesmo a lógica de primeira ordem em certos aspectos) em termos de escalabilidade reside na sua capacidade de lidar com incerteza de forma compacta e eficiente.</p>
+<ul>
+<li><strong>Lógica Proposicional</strong>: Agentes baseados em lógica proposicional constroem o que <strong>Russell e Norvig (2010, p. 265)</strong> chamam de "modelo lógico completo dos efeitos das ações" para inferir o estado do mundo. No entanto, em domínios reais, a quantidade de informações necessárias para ter certeza absoluta sobre cada proposição é esmagadora. Isso leva a um "problema de qualificação" onde "é inviável enumerar todas as exceções" [RUSSELL; NORVIG, 2010, p. 72]. Além disso, a representação do estado de crença pode se tornar muito grande para ser gerenciada.</li>
+<li><strong>Redes Bayesianas</strong>: Ao explorar a independência condicional, as Redes Bayesianas superam a complexidade exponencial da distribuição conjunta. Em vez de uma única tabela gigantesca, elas utilizam tabelas de probabilidade condicional (CPTs) menores para cada nó, dependendo apenas de seus genitores diretos. <strong>"O fato de que cada parâmetro da rede tem um significado preciso em termos de apenas um pequeno conjunto de variáveis ​​é crucial para a robustez e facilidade de especificação dos modelos"</strong>. Isso permite que modelos de domínios complexos sejam construídos de forma modular e escalável, tornando o raciocínio probabilístico computacionalmente viável em muitas situações práticas. A transição para modelos probabilísticos também permite que os sistemas de IA aprendam com a experiência e combinem o melhor da IA clássica e das redes neurais [RUSSELL; NORVIG, 2010, p. 19].</li>
+</ul>
+<h3 id="exemplos-discutidos-em-aula-e-referencias">Exemplos Discutidos em Aula e Referências</h3>
+<p>Diversos exemplos e aplicações foram abordados, reforçando a relevância das Redes Bayesianas:</p>
+<ul>
+<li><strong>Exemplo do Alarme de Bruce Banner</strong>: Este foi o exemplo central usado nos slides da aula 16 e 17. Ele ilustra como construir uma rede simples para um sistema de alarme que pode ser ativado por roubo ou terremoto, e como as chamadas de vizinhos (John e Mary) dependem do alarme. O exemplo detalha o cálculo da probabilidade de um roubo dadas as chamadas dos vizinhos, demonstrando a inferência exata por enumeração.</li>
+<li><strong>Redes Bayesianas Híbridas</strong>: Os slides da aula 16 e 17 mencionam como lidar com variáveis contínuas (como temperatura ou pressão) em Redes Bayesianas, seja através da discretização, do uso de distribuições de probabilidade conhecidas (como a distribuição Gaussiana), ou de métodos não paramétricos. Também é discutido como integrar variáveis contínuas e discretas (Redes Bayesianas Híbridas), por exemplo, usando uma distribuição condicional linear-gaussiana. <strong>Russell e Norvig (2010, p. 520)</strong> também discutem a inclusão de variáveis contínuas em Redes Bayesianas.</li>
+<li><strong>Modelos Ocultos de Markov (HMMs)</strong>: Como demonstrado na aula 19, os HMMs são um tipo específico de modelo probabilístico temporal, onde o estado do processo é descrito por uma única variável aleatória discreta. Eles são abordados como um caso especial de Redes Bayesianas Dinâmicas para raciocínio ao longo do tempo. As aplicações de HMMs incluem reconhecimento de fala e processamento de linguagem natural. Os slides mencionam materiais complementares como <code>UmbrellaWorld.py</code> e <code>DanielJurafsky2021.pdf</code>.</li>
+<li><strong>Filtros de Kalman</strong>: Apresentados na aula 20, os Filtros de Kalman são outro exemplo de raciocínio probabilístico ao longo do tempo, focados em problemas de estimação e predição de estados em sistemas dinâmicos, como o rastreamento de objetos (e.g., aviões). Eles modelam o conhecimento do estado como uma "mancha gaussiana" (Gaussian blob) e atualizam a estimativa combinando a predição do estado com as leituras dos sensores. <strong>Russell e Norvig (2010, p. 584)</strong> os incluem no capítulo sobre raciocínio probabilístico ao longo do tempo.</li>
+</ul>
+<p>A flexibilidade e o rigor matemático das Redes Bayesianas as tornam uma das ferramentas mais importantes e amplamente utilizadas em IA para lidar com a incerteza, sendo aplicadas em campos como diagnóstico médico, sistemas de recomendação, bioinformática e monitoramento de sistemas complexos [RUSSELL; NORVIG, 2010, p. 70, 74].</p>
+<h2 id="projeto">Projeto</h2>
+<h3 id="cenario-aula-particular-de-piano">Cenário: Aula Particular de Piano</h3>
+<p>Para reforçar os conceitos, implementamos um exemplo prático de Rede Bayesiana utilizando a biblioteca pgmpy.</p>
+<p>O cenário modelado envolve uma situação didática em que um(a) aluno(a) de piano pode se sentir frustrado(a) ou até desistir das aulas, dependendo de dois fatores principais: se estudou e se a música é complexa.</p>
+<p>As variáveis consideradas foram:</p>
+<ul>
+<li><strong>AlunoSemPratica</strong>: indica se o(a) aluno(a) chegou à aula sem ter praticado.</li>
+<li><strong>MusicaComplexa</strong>: indica se a música proposta para a aula é de difícil execução.</li>
+<li><strong>Frustracao</strong>: representa o estado emocional do aluno frente à aula.</li>
+<li><strong>Desistencia</strong>: variável que indica se o(a) aluno(a) desiste das aulas de piano.</li>
+</ul>
+<p>As dependências entre as variáveis seguem uma estrutura de <strong>grafo acíclico dirigido (DAG)</strong>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>AlunoSemPratica   MusicaComplexa
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>        \              /
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>         \            /
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>           -&gt; Frustracao -&gt; Desistencia
+</code></pre></div>
+<h3 id="construcao-do-modelo">Construção do Modelo</h3>
+<ol>
+<li>
+<p><strong>Definição da estrutura (DAG)</strong>:</p>
+</li>
+<li>
+<p>AlunoSemPratica e MusicaComplexa influenciam Frustracao.</p>
+</li>
+<li>
+<p>Frustracao influencia Desistencia.</p>
+</li>
+<li>
+<p><strong>Tabelas de Probabilidade Condicional (CPDs)</strong>:</p>
+</li>
+<li>
+<p>São definidas para todas as variáveis, considerando as dependências.</p>
+</li>
+<li>
+<p>Exemplo: \$P(\text{Frustracao} \mid \text{AlunoSemPratica}, \text{MusicaComplexa})\$ quantifica a chance de frustração dependendo das outras duas variáveis.</p>
+</li>
+<li>
+<p><strong>Verificação e Inferência</strong>:</p>
+</li>
+<li>
+<p>O modelo é verificado quanto à sua consistência com <code>.check_model()</code>.</p>
+</li>
+<li>
+<p>Utiliza-se o algoritmo de <strong>Eliminação de Variáveis</strong> para responder perguntas probabilísticas, como:</p>
+<ul>
+<li>Qual a probabilidade de desistência se o aluno não praticou e a música é complexa?</li>
+<li>Qual a chance de frustração se o aluno praticou e a música é simples?</li>
+<li>Qual a probabilidade de desistência mesmo sem frustração?</li>
+</ul>
+</li>
+</ol>
+<h3 id="codigo-python">Código Python</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">#import pandas as pd</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pgmpy.models</span><span class="w"> </span><span class="kn">import</span> <span class="n">DiscreteBayesianNetwork</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pgmpy.factors.discrete</span><span class="w"> </span><span class="kn">import</span> <span class="n">TabularCPD</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="kn">from</span><span class="w"> </span><span class="nn">pgmpy.inference</span><span class="w"> </span><span class="kn">import</span> <span class="n">VariableElimination</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="c1"># 1. Definindo a estrutura da rede - Contexto: Aula Particular de Piano</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="c1"># As arestas representam as dependências: (causa, efeito)</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="n">model</span> <span class="o">=</span> <span class="n">DiscreteBayesianNetwork</span><span class="p">([</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    <span class="p">(</span><span class="s1">&#39;AlunoSemPratica&#39;</span><span class="p">,</span> <span class="s1">&#39;Frustracao&#39;</span><span class="p">),</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>    <span class="p">(</span><span class="s1">&#39;MusicaComplexa&#39;</span><span class="p">,</span> <span class="s1">&#39;Frustracao&#39;</span><span class="p">),</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    <span class="p">(</span><span class="s1">&#39;Frustracao&#39;</span><span class="p">,</span> <span class="s1">&#39;Desistencia&#39;</span><span class="p">)</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">])</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="c1"># 2. Definindo as Tabelas de Probabilidade Condicional (CPDs)</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="c1"># AlunoSemPratica: P(ASP) - Probabilidade do aluno não ter praticado</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="n">cpd_aluno_sem_pratica</span> <span class="o">=</span> <span class="n">TabularCPD</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;AlunoSemPratica&#39;</span><span class="p">,</span> <span class="n">variable_card</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.3</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.7</span><span class="p">]])</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="c1"># Card = 2 significa que a variável tem 2 estados (True/False ou 0/1)</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="c1"># Values = [[P(AlunoSemPratica=True)], [P(AlunoSemPratica=False)]]</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="c1"># MusicaComplexa: P(MC) - Probabilidade da música ser complexa</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="n">cpd_musica_complexa</span> <span class="o">=</span> <span class="n">TabularCPD</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;MusicaComplexa&#39;</span><span class="p">,</span> <span class="n">variable_card</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">values</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">0.6</span><span class="p">]])</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>
+<a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="c1"># Frustracao: P(F | ASP, MC) - Probabilidade de frustração dadas as condições</span>
+<a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="c1"># A ordem dos valores segue: (ASP=T, MC=T), (ASP=T, MC=F), (ASP=F, MC=T), (ASP=F, MC=F)</span>
+<a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="n">cpd_frustracao</span> <span class="o">=</span> <span class="n">TabularCPD</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Frustracao&#39;</span><span class="p">,</span> <span class="n">variable_card</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a>                           <span class="n">values</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.85</span><span class="p">,</span> <span class="mf">0.6</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">],</span>   <span class="c1"># P(Frustracao=True | ASP, MC)</span>
+<a id="__codelineno-1-27" name="__codelineno-1-27" href="#__codelineno-1-27"></a>                                   <span class="p">[</span><span class="mf">0.15</span><span class="p">,</span> <span class="mf">0.4</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.9</span><span class="p">]],</span>  <span class="c1"># P(Frustracao=False | ASP, MC)</span>
+<a id="__codelineno-1-28" name="__codelineno-1-28" href="#__codelineno-1-28"></a>                           <span class="n">evidence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;AlunoSemPratica&#39;</span><span class="p">,</span> <span class="s1">&#39;MusicaComplexa&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-29" name="__codelineno-1-29" href="#__codelineno-1-29"></a>                           <span class="n">evidence_card</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-1-30" name="__codelineno-1-30" href="#__codelineno-1-30"></a>
+<a id="__codelineno-1-31" name="__codelineno-1-31" href="#__codelineno-1-31"></a><span class="c1"># Desistencia: P(D | F) - Probabilidade de desistir dada a frustração</span>
+<a id="__codelineno-1-32" name="__codelineno-1-32" href="#__codelineno-1-32"></a><span class="n">cpd_desistencia</span> <span class="o">=</span> <span class="n">TabularCPD</span><span class="p">(</span><span class="n">variable</span><span class="o">=</span><span class="s1">&#39;Desistencia&#39;</span><span class="p">,</span> <span class="n">variable_card</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span>
+<a id="__codelineno-1-33" name="__codelineno-1-33" href="#__codelineno-1-33"></a>                            <span class="n">values</span><span class="o">=</span><span class="p">[[</span><span class="mf">0.7</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">],</span>   <span class="c1"># P(Desistencia=True | F)</span>
+<a id="__codelineno-1-34" name="__codelineno-1-34" href="#__codelineno-1-34"></a>                                    <span class="p">[</span><span class="mf">0.3</span><span class="p">,</span> <span class="mf">0.95</span><span class="p">]],</span>  <span class="c1"># P(Desistencia=False | F)</span>
+<a id="__codelineno-1-35" name="__codelineno-1-35" href="#__codelineno-1-35"></a>                            <span class="n">evidence</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Frustracao&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-36" name="__codelineno-1-36" href="#__codelineno-1-36"></a>                            <span class="n">evidence_card</span><span class="o">=</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+<a id="__codelineno-1-37" name="__codelineno-1-37" href="#__codelineno-1-37"></a>
+<a id="__codelineno-1-38" name="__codelineno-1-38" href="#__codelineno-1-38"></a><span class="c1"># 3. Adicionando as CPDs ao modelo</span>
+<a id="__codelineno-1-39" name="__codelineno-1-39" href="#__codelineno-1-39"></a><span class="n">model</span><span class="o">.</span><span class="n">add_cpds</span><span class="p">(</span><span class="n">cpd_aluno_sem_pratica</span><span class="p">,</span> <span class="n">cpd_musica_complexa</span><span class="p">,</span> <span class="n">cpd_frustracao</span><span class="p">,</span> <span class="n">cpd_desistencia</span><span class="p">)</span>
+<a id="__codelineno-1-40" name="__codelineno-1-40" href="#__codelineno-1-40"></a>
+<a id="__codelineno-1-41" name="__codelineno-1-41" href="#__codelineno-1-41"></a><span class="c1"># 4. Verificando a consistência do modelo</span>
+<a id="__codelineno-1-42" name="__codelineno-1-42" href="#__codelineno-1-42"></a><span class="c1"># É sempre bom verificar se as CPDs foram adicionadas corretamente e se o modelo é válido.</span>
+<a id="__codelineno-1-43" name="__codelineno-1-43" href="#__codelineno-1-43"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Modelo válido?&quot;</span><span class="p">,</span> <span class="n">model</span><span class="o">.</span><span class="n">check_model</span><span class="p">())</span>
+<a id="__codelineno-1-44" name="__codelineno-1-44" href="#__codelineno-1-44"></a>
+<a id="__codelineno-1-45" name="__codelineno-1-45" href="#__codelineno-1-45"></a><span class="c1"># 5. Realizando Inferência</span>
+<a id="__codelineno-1-46" name="__codelineno-1-46" href="#__codelineno-1-46"></a><span class="c1"># Agora, a parte divertida! Vamos fazer perguntas ao nosso modelo.</span>
+<a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="c1"># Criamos um objeto de inferência a partir do nosso modelo.</span>
+<a id="__codelineno-1-48" name="__codelineno-1-48" href="#__codelineno-1-48"></a><span class="n">infer</span> <span class="o">=</span> <span class="n">VariableElimination</span><span class="p">(</span><span class="n">model</span><span class="p">)</span>
+<a id="__codelineno-1-49" name="__codelineno-1-49" href="#__codelineno-1-49"></a>
+<a id="__codelineno-1-50" name="__codelineno-1-50" href="#__codelineno-1-50"></a><span class="c1"># Pergunta 1: Qual a probabilidade de Desistência se o Aluno não praticou e a Música é Complexa?</span>
+<a id="__codelineno-1-51" name="__codelineno-1-51" href="#__codelineno-1-51"></a><span class="c1"># P(Desistencia | AlunoSemPratica=True, MusicaComplexa=True)</span>
+<a id="__codelineno-1-52" name="__codelineno-1-52" href="#__codelineno-1-52"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Inferência 1 ---&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-53" name="__codelineno-1-53" href="#__codelineno-1-53"></a><span class="n">prob_desistencia_aluno_musica</span> <span class="o">=</span> <span class="n">infer</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Desistencia&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-54" name="__codelineno-1-54" href="#__codelineno-1-54"></a>                                           <span class="n">evidence</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;AlunoSemPratica&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;MusicaComplexa&#39;</span><span class="p">:</span> <span class="mi">0</span><span class="p">})</span>
+<a id="__codelineno-1-55" name="__codelineno-1-55" href="#__codelineno-1-55"></a><span class="c1"># 0 geralmente representa True, 1 representa False na pgmpy por padrão, mas pode variar.</span>
+<a id="__codelineno-1-56" name="__codelineno-1-56" href="#__codelineno-1-56"></a><span class="c1"># É importante verificar a ordem dos estados definidos na CPD.</span>
+<a id="__codelineno-1-57" name="__codelineno-1-57" href="#__codelineno-1-57"></a><span class="c1"># No nosso caso, 0 é True e 1 é False para todas as variáveis.</span>
+<a id="__codelineno-1-58" name="__codelineno-1-58" href="#__codelineno-1-58"></a><span class="nb">print</span><span class="p">(</span><span class="n">prob_desistencia_aluno_musica</span><span class="p">)</span>
+<a id="__codelineno-1-59" name="__codelineno-1-59" href="#__codelineno-1-59"></a>
+<a id="__codelineno-1-60" name="__codelineno-1-60" href="#__codelineno-1-60"></a><span class="c1"># Pergunta 2: Qual a probabilidade de Frustração se o Aluno praticou e a Música é Simples?</span>
+<a id="__codelineno-1-61" name="__codelineno-1-61" href="#__codelineno-1-61"></a><span class="c1"># P(Frustracao | AlunoSemPratica=False, MusicaComplexa=False)</span>
+<a id="__codelineno-1-62" name="__codelineno-1-62" href="#__codelineno-1-62"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Inferência 2 ---&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-63" name="__codelineno-1-63" href="#__codelineno-1-63"></a><span class="n">prob_frustracao_aluno_preparado</span> <span class="o">=</span> <span class="n">infer</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Frustracao&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-64" name="__codelineno-1-64" href="#__codelineno-1-64"></a>                                             <span class="n">evidence</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;AlunoSemPratica&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;MusicaComplexa&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<a id="__codelineno-1-65" name="__codelineno-1-65" href="#__codelineno-1-65"></a><span class="nb">print</span><span class="p">(</span><span class="n">prob_frustracao_aluno_preparado</span><span class="p">)</span>
+<a id="__codelineno-1-66" name="__codelineno-1-66" href="#__codelineno-1-66"></a>
+<a id="__codelineno-1-67" name="__codelineno-1-67" href="#__codelineno-1-67"></a><span class="c1"># Pergunta 3: Qual a probabilidade de Desistência se não há Frustração?</span>
+<a id="__codelineno-1-68" name="__codelineno-1-68" href="#__codelineno-1-68"></a><span class="c1"># P(Desistencia | Frustracao=False)</span>
+<a id="__codelineno-1-69" name="__codelineno-1-69" href="#__codelineno-1-69"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">--- Inferência 3 ---&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-70" name="__codelineno-1-70" href="#__codelineno-1-70"></a><span class="n">prob_desistencia_sem_frustracao</span> <span class="o">=</span> <span class="n">infer</span><span class="o">.</span><span class="n">query</span><span class="p">(</span><span class="n">variables</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Desistencia&#39;</span><span class="p">],</span>
+<a id="__codelineno-1-71" name="__codelineno-1-71" href="#__codelineno-1-71"></a>                                             <span class="n">evidence</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;Frustracao&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">})</span>
+<a id="__codelineno-1-72" name="__codelineno-1-72" href="#__codelineno-1-72"></a><span class="nb">print</span><span class="p">(</span><span class="n">prob_desistencia_sem_frustracao</span><span class="p">)</span>
+</code></pre></div>
+<h3 id="resultado">Resultado</h3>
+<p><img alt="Resultado da execução do código da Rede Bayesiana" src="../output_rb.png" /></p>
+<h3 id="consideracoes-finais">Considerações Finais</h3>
+<p>Esse projeto exemplifica o poder das Redes Bayesianas para modelar situações do mundo real que envolvem incerteza, permitindo decisões informadas a partir de evidências parciais. Ele também evidencia a escalabilidade do modelo: novos fatores poderiam ser adicionados ao DAG (como motivação, feedback dos pais etc.), sem reconstruir todo o sistema, o que é  uma característica crucial para agentes de IA operando em domínios complexos e dinâmicos.</p>
+<hr />
+<p><strong>Referências</strong></p>
+<p>LUGER, George F. <strong>Artificial Intelligence</strong>: Structures and Strategies for Complex Problem Solving. 6. ed. Boston: Pearson Education, 2009.</p>
+<p>RUSSELL, Stuart J.; NORVIG, Peter. <strong>Artificial Intelligence</strong>: A Modern Approach. 3. ed. Upper Saddle River: Prentice Hall, 2010.</p>
+<p>AnAj, Public domain, via Wikimedia Commons</p>
+<p>JURAFSKY, Daniel; MARTIN, James H. <strong>Speech and Language Processing</strong>. [S. l.]: Stanford University, 2021.</p>
+<p>FGA0221 – IA - 16. <strong>Redes Bayesianas</strong>. Material de aula. [S. l.: s. n.], [entre 2023 e 2025].</p>
+<p>FGA0221 – IA - 17. <strong>Redes Bayesianas – 2ª Parte</strong>. Material de aula. [S. l.: s. n.], [entre 2023 e 2025].</p>
+<p>FGA0221 – IA - 19. <strong>Raciocínio probabilístico ao longo do tempo – Parte 2</strong>. Material de aula. [S. l.: s. n.], [entre 2023 e 2025].</p>
+<p>FGA0221 – IA - 20. <strong>Filtro de Kalman: Algoritmo</strong>. Material de aula. [S. l.: s. n.], [entre 2023 e 2025].</p>
+<p>BEST, Kalman filter Expanation. [S. l.: s. n.], [entre 2023 e 2025]. (BEST, Kalman filter Expanation.pdf)
+```</p>
+<hr />
+<table>
+<thead>
+<tr>
+<th>Versão</th>
+<th>Data</th>
+<th>Modificação</th>
+<th>Nome</th>
+<th>GitHub</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>1.0</code></td>
+<td>16/07/2025</td>
+<td>Criação do documento</td>
+<td>Ana Beatriz Norberto</td>
+<td><a href="https://github.com/ananorberto">@ananorberto</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Voltar para o topo
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/ananorberto" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://linkedin.com/in/seu-usuario" target="_blank" rel="noopener" title="linkedin.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3M135.4 416H69V202.2h66.5V416zM102.2 96a38.5 38.5 0 1 1 0 77 38.5 38.5 0 1 1 0-77m282.1 320h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "navigation.top", "navigation.sections", "navigation.expand", "navigation.indexes", "navigation.prune", "navigation.instant", "navigation.tracking", "search.suggest", "search.highlight", "content.tabs.link", "content.code.annotation", "content.code.copy", "content.code.select", "content.tooltips", "content.action.edit", "content.action.view", "content.action.download", "content.action.copy", "content.action.print", "content.action.share", "content.action.feedback", "content.action.issue"], "search": "../../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado para \u00e1rea de transfer\u00eancia", "clipboard.copy": "Copiar para \u00e1rea de transfer\u00eancia", "search.result.more.one": "mais 1 nesta p\u00e1gina", "search.result.more.other": "# mais nesta p\u00e1gina", "search.result.none": "Nenhum documento encontrado", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Digite para iniciar a busca", "search.result.term.missing": "Ausente", "select.version": "Selecione a vers\u00e3o"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.50899def.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,71 @@
+site_name: AI Portfolio
+site_url: https://ananorberto.github.io/portfolio-ia/en/
+site_author: Ana Norberto
+site_description: Artificial Intelligence Portfolio
+
+theme:
+  name: material
+  language: en
+  logo: ../assets/logo_robot.png
+  favicon: ../assets/logo_robot.png
+  features:
+    - navigation.tabs
+    - navigation.top
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - navigation.prune
+    - navigation.instant
+    - navigation.tracking
+    - search.suggest
+    - search.highlight
+    - content.tabs.link
+    - content.code.annotation
+    - content.code.copy
+    - content.code.select
+    - content.tooltips
+    - content.action.edit
+    - content.action.view
+    - content.action.download
+    - content.action.copy
+    - content.action.print
+    - content.action.share
+    - content.action.feedback
+    - content.action.issue
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+      primary: deep purple
+      accent: deep purple
+      background: white
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+      primary: deep purple
+      accent: deep purple
+      background: "#1a1a1a"
+  font:
+    text: "Raleway"
+    code: "IBM Plex Mono"
+  font_family: "Raleway, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif"
+  navigation:
+    collapse: true
+    expand: true
+    sticky: true
+
+nav:
+  - Home: index.md
+  - Portfolio 1 – Introduction to AI: 
+      - Introduction: portfolio1/introducao.md
+      - AI History: portfolio1/historico.md
+      - State of the Art: portfolio1/estado_arte.md
+      - Benefits and Risks: portfolio1/beneficios_riscos.md
+      - Intelligent Agents:
+          - Concept: portfolio1/agentes_inteligentes.md
+          - Environments: portfolio1/ambientes.md
+          - Rationality: portfolio1/racionalidade.md
+      - Problems/Projects: portfolio1/projetos.md
+      - Conclusion: portfolio1/conclusao.md 
